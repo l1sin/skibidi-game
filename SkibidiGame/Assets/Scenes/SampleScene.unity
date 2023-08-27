@@ -1074,6 +1074,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PistolObject
       objectReference: {fileID: 0}
+    - target: {fileID: 2361213626132137561, guid: 1d4ef90af9d327d4f9b84310a8786d15,
+        type: 3}
+      propertyPath: m_InitialEventName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361213626132137561, guid: 1d4ef90af9d327d4f9b84310a8786d15,
+        type: 3}
+      propertyPath: m_InitialEventNameOverriden
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4109444174767182722, guid: 1d4ef90af9d327d4f9b84310a8786d15,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1134,6 +1144,11 @@ PrefabInstance:
       propertyPath: AimingPos
       value: 
       objectReference: {fileID: 1283306089}
+    - target: {fileID: 9011275403039045153, guid: 1d4ef90af9d327d4f9b84310a8786d15,
+        type: 3}
+      propertyPath: TimeScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9011275403039045153, guid: 1d4ef90af9d327d4f9b84310a8786d15,
         type: 3}
       propertyPath: DefaultPos

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class TestAnim : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class TestAnim : MonoBehaviour
     public Animator Animator;
     public Transform Gun;
     public Camera Camera;
+    public VisualEffect VFX;
 
     public Transform DefaultPos;
     public Transform AimingPos;
@@ -20,11 +22,19 @@ public class TestAnim : MonoBehaviour
 
     public bool CanAim;
 
+    public float TimeScale;
+
     public void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && !Animator.GetCurrentAnimatorStateInfo(0).IsName("PistolShot"))
         {
             Animator.SetTrigger("Shoot");
+            VFX.Play();
+            Time.timeScale = TimeScale;
+        }
+        else if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("PistolShot"))
+        {
+            Time.timeScale = 1;
         }
 
         if (CanAim) Aim();
