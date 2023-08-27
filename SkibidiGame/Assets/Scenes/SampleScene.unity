@@ -719,6 +719,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &946091547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 946091549}
+  - component: {fileID: 946091548}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &946091548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946091547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 563ebaa55046e934da94483bd3facc57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _soundPrefab: {fileID: 3082421271153698346, guid: 5be4c79f3beea354e9ee824419b6002b,
+    type: 3}
+--- !u!4 &946091549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946091547}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1088700547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,14 +1187,14 @@ PrefabInstance:
       objectReference: {fileID: 330585545}
     - target: {fileID: 9011275403039045153, guid: 1d4ef90af9d327d4f9b84310a8786d15,
         type: 3}
+      propertyPath: CanAim
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011275403039045153, guid: 1d4ef90af9d327d4f9b84310a8786d15,
+        type: 3}
       propertyPath: AimingPos
       value: 
       objectReference: {fileID: 1283306089}
-    - target: {fileID: 9011275403039045153, guid: 1d4ef90af9d327d4f9b84310a8786d15,
-        type: 3}
-      propertyPath: TimeScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9011275403039045153, guid: 1d4ef90af9d327d4f9b84310a8786d15,
         type: 3}
       propertyPath: DefaultPos
@@ -1180,3 +1226,4 @@ SceneRoots:
   - {fileID: 77863787}
   - {fileID: 667400388}
   - {fileID: 1569913947}
+  - {fileID: 946091549}

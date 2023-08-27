@@ -1,3 +1,4 @@
+using Sounds;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -24,6 +25,8 @@ public class TestAnim : MonoBehaviour
 
     public float TimeScale;
 
+    public AudioClip shotSound;
+
     public void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && !Animator.GetCurrentAnimatorStateInfo(0).IsName("PistolShot"))
@@ -31,6 +34,8 @@ public class TestAnim : MonoBehaviour
             Animator.SetTrigger("Shoot");
             VFX.Play();
             Time.timeScale = TimeScale;
+            SoundManager.Instance.PlaySound(shotSound);
+
         }
         else if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("PistolShot"))
         {
