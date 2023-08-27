@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TestAnim : MonoBehaviour
 {
+    public CharacterMovement _CharacterMovement;
     public Animator Animator;
     public Transform Gun;
     public Camera Camera;
@@ -25,8 +26,10 @@ public class TestAnim : MonoBehaviour
         {
             Animator.SetTrigger("Shoot");
         }
+
         if (CanAim) Aim();
-        if (Input.GetKey(KeyCode.W))
+
+        if (CharacterInput.IsMoving && _CharacterMovement.IsGrounded)
         {
             Animator.SetBool("Walking", true);
         }
@@ -34,8 +37,6 @@ public class TestAnim : MonoBehaviour
         {
             Animator.SetBool("Walking", false);
         }
-
-
     }
 
     public void Aim()

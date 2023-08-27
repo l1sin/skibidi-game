@@ -28,14 +28,14 @@ public class FPSCamera : MonoBehaviour
 
     private void RotateVertical()
     {
-        _verticalRotation -= PlayerInput.MouseInputY * _mouseSensitivityY;
+        _verticalRotation -= CharacterInput.MouseInputY * _mouseSensitivityY;
         _verticalRotation = Mathf.Clamp(_verticalRotation, -90f, 90f);
         transform.localRotation = Quaternion.Euler(_verticalRotation, 0f,0f);
     }
 
     private void RotateHorizontal()
     {
-        _horizontalRotation = PlayerInput.MouseInputX * _mouseSensitivityX;
+        _horizontalRotation = CharacterInput.MouseInputX * _mouseSensitivityX;
         _player.Rotate(Vector3.up * _horizontalRotation);
     }
 }

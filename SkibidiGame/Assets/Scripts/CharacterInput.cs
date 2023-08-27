@@ -1,12 +1,13 @@
 using UnityEngine;
 
-public class PlayerInput : MonoBehaviour
+public class CharacterInput : MonoBehaviour
 {
     public static float MouseInputX;
     public static float MouseInputY;
 
     public static float MoveInputX;
     public static float MoveInputY;
+    public static bool IsMoving;
 
     public static bool Jump;
 
@@ -31,6 +32,8 @@ public class PlayerInput : MonoBehaviour
         MouseInputY = Input.GetAxis(GlobalStrings.MouseYInput);
 
         MoveInputX = Input.GetAxisRaw(GlobalStrings.HorizontalInput);
-        MoveInputY = Input.GetAxisRaw(GlobalStrings.VerticalInput); 
+        MoveInputY = Input.GetAxisRaw(GlobalStrings.VerticalInput);
+        if (MoveInputX != 0 || MoveInputY != 0) IsMoving = true;
+        else IsMoving = false;
     }
 }
