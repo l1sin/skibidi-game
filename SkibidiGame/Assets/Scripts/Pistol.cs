@@ -19,6 +19,8 @@ public class Pistol : MonoBehaviour
     public AudioClip shotSound;
     public GameObject Particles;
 
+    public float Damage;
+
     public void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0) && !IsShooting)
@@ -56,6 +58,12 @@ public class Pistol : MonoBehaviour
             particles.transform.SetParent(objectHit);
             Destroy(particles, 2);
             Debug.Log(objectHit.name);
+
+            Enemy enemy = objectHit.GetComponentInParent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.GetDamage(Damage);
+            }
         }
     }
 }

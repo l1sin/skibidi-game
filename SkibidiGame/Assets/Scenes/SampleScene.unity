@@ -222,6 +222,8 @@ MonoBehaviour:
   Body: {fileID: 1847566}
   Head: {fileID: 662100814}
   Speed: 2
+  HealthMax: 5
+  HealthCurrent: 5
 --- !u!1 &77863786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,6 +1520,11 @@ PrefabInstance:
     - target: {fileID: 9011275403039045153, guid: 1d4ef90af9d327d4f9b84310a8786d15,
         type: 3}
       propertyPath: CanAim
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011275403039045153, guid: 1d4ef90af9d327d4f9b84310a8786d15,
+        type: 3}
+      propertyPath: Damage
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9011275403039045153, guid: 1d4ef90af9d327d4f9b84310a8786d15,

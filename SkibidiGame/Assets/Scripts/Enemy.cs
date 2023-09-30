@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -8,6 +9,14 @@ public class Enemy : MonoBehaviour
     public Transform Body;
     public Transform Head;
     public float Speed;
+
+    public float HealthMax;
+    public float HealthCurrent;
+
+    public void Awake()
+    {
+        HealthCurrent = HealthMax;
+    }
 
     public void Update()
     {
@@ -27,5 +36,18 @@ public class Enemy : MonoBehaviour
     public void LookAtPlayer()
     {
         Head.LookAt(LookTarget);
+    }
+
+    public void GetDamage(float damage)
+    {
+        HealthCurrent -= damage;
+        if (HealthCurrent <= 0)
+        {
+            Die();
+        }
+    }
+    public void Die()
+    {
+        Destroy(gameObject);
     }
 }
