@@ -53,6 +53,7 @@ public class Pistol : MonoBehaviour
         {
             Transform objectHit = HitInfo.transform;
             GameObject particles = Instantiate(Particles, HitInfo.point, Quaternion.LookRotation(HitInfo.normal));
+            particles.transform.SetParent(objectHit);
             Destroy(particles, 2);
             Debug.Log(objectHit.name);
         }
