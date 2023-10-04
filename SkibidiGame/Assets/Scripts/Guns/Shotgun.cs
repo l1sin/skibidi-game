@@ -28,7 +28,7 @@ public class Shotgun : Gun
                 Transform objectHit = HitInfo.transform;
                 GameObject particles = Instantiate(ImpactVFX, HitInfo.point, Quaternion.LookRotation(HitInfo.normal));
                 particles.transform.SetParent(objectHit);
-                Destroy(particles, 2);
+                Destroy(particles, 5);
                 Debug.Log(objectHit.name);
 
                 Enemy enemy = objectHit.GetComponentInParent<Enemy>();
