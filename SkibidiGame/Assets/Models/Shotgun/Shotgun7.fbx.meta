@@ -1,28 +1,13 @@
 fileFormatVersion: 2
-guid: 17bc4f4f6c3baf84ca78951bb6a92159
+guid: 61d6474feb481cd44ab47ebe3adfc0d7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: DarkMetal
-    second: {fileID: 2100000, guid: 0c9bd6bdc6672dd4dbb84323df1cd928, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: LightMetal
-    second: {fileID: 2100000, guid: 9ee6a7e9efdef764ea6f2651eecfdf8a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Wood
-    second: {fileID: 2100000, guid: 94bc2135973a3804bb177b32da844234, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
-    materialSearch: 2
+    materialSearch: 1
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
