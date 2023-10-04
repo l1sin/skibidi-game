@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 9131857724792124438}
   - component: {fileID: 3067658239188331448}
-  - component: {fileID: 5633168305042426162}
+  - component: {fileID: 4623953815652712580}
   m_Layer: 0
-  m_Name: RifleObject
+  m_Name: 2. RifleObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9131857724792124438
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1959675360189627971}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.335, y: -0.33200002, z: 0.441}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -55,7 +55,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5633168305042426162
+--- !u!114 &4623953815652712580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,17 +64,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1959675360189627971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b98cd78f295efd24f8100d38db6dad25, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ee6f72eb9a798a4e94c0aa6f70327cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _CharacterMovement: {fileID: 0}
   Animator: {fileID: 3067658239188331448}
-  Gun: {fileID: 9131857724792124438}
+  GunObject: {fileID: 9131857724792124438}
   Camera: {fileID: 0}
-  VFX: {fileID: 7635125075018523407}
+  ShotVFX: {fileID: 7635125075018523407}
   IsShooting: 0
   shotSound: {fileID: 8300000, guid: 6774edaee34537943a947319a76ccca5, type: 3}
-  Particles: {fileID: 8449783667161613993, guid: 12b310721abba6140b52576b8d8f29a4,
+  ImpactVFX: {fileID: 8449783667161613993, guid: 12b310721abba6140b52576b8d8f29a4,
     type: 3}
   Damage: 1
 --- !u!1001 &2262456115850639101
@@ -158,7 +158,7 @@ PrefabInstance:
     - target: {fileID: 2989628639596632918, guid: ad7589e81b60bed469fb888a3b31e44c,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

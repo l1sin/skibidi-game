@@ -10,14 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4109444174767182722}
   - component: {fileID: 5148368978652694793}
-  - component: {fileID: 4489831569220315349}
+  - component: {fileID: 5043257200525452220}
   m_Layer: 0
-  m_Name: PistolObject
+  m_Name: 1. PistolObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4109444174767182722
 Transform:
   m_ObjectHideFlags: 0
@@ -55,7 +55,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4489831569220315349
+--- !u!114 &5043257200525452220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,17 +64,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 895667444773567404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b98cd78f295efd24f8100d38db6dad25, type: 3}
+  m_Script: {fileID: 11500000, guid: e668ce1467922b643ade38061d4e9ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _CharacterMovement: {fileID: 0}
   Animator: {fileID: 5148368978652694793}
-  Gun: {fileID: 4109444174767182722}
+  GunObject: {fileID: 4109444174767182722}
   Camera: {fileID: 0}
-  VFX: {fileID: 8433523526178424382}
+  ShotVFX: {fileID: 8433523526178424382}
   IsShooting: 0
   shotSound: {fileID: 8300000, guid: 3691bf51b168c2448b50e41fe8a05c16, type: 3}
-  Particles: {fileID: 8449783667161613993, guid: 12b310721abba6140b52576b8d8f29a4,
+  ImpactVFX: {fileID: 8449783667161613993, guid: 12b310721abba6140b52576b8d8f29a4,
     type: 3}
   Damage: 1
 --- !u!1001 &259333986369934284
@@ -139,6 +139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VFXMuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989628639596632918, guid: ad7589e81b60bed469fb888a3b31e44c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
