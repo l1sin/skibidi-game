@@ -10,10 +10,6 @@ public class Pistol : MonoBehaviour
     public Camera Camera;
     public VisualEffect VFX;
 
-    public Transform DefaultPos;
-    public Transform AimingPos;
-    public Transform CurrentPos;
-
     public bool IsShooting;
    
     public AudioClip shotSound;
