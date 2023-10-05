@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     public VisualEffect ShotVFX;
 
     public bool IsShooting;
+    public bool CanSwitch = true;
    
     public AudioClip shotSound;
     public GameObject ImpactVFX;
@@ -21,6 +22,7 @@ public class Gun : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0) && !IsShooting)
         {
             Shoot();
+            CanSwitch = false;
         }
 
         if (CharacterInput.IsMoving && _CharacterMovement.IsGrounded)
@@ -36,6 +38,7 @@ public class Gun : MonoBehaviour
     public void EndShooting()
     {
         IsShooting = false;
+        CanSwitch = true;
     }
 
     public virtual void Shoot() { }

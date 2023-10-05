@@ -412,6 +412,7 @@ MonoBehaviour:
   - {fileID: 827840558}
   - {fileID: 1758837894}
   - {fileID: 184705485}
+  CurrentGun: {fileID: 2834606675073872227}
 --- !u!1 &184705485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 194350546001932286, guid: 53c57ca4b0014324da5be46f95eeab0f,
@@ -1520,6 +1521,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1. PistolObject
       objectReference: {fileID: 0}
+    - target: {fileID: 895667444773567404, guid: 1d4ef90af9d327d4f9b84310a8786d15,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3090627725086017690, guid: 1d4ef90af9d327d4f9b84310a8786d15,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4109444174767182722, guid: 1d4ef90af9d327d4f9b84310a8786d15,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1591,6 +1602,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2834606675073872223}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2834606675073872227 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5043257200525452220, guid: 1d4ef90af9d327d4f9b84310a8786d15,
+    type: 3}
+  m_PrefabInstance: {fileID: 2834606675073872223}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827840558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e668ce1467922b643ade38061d4e9ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3506672123467288131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1750,6 +1773,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3. ShotgunObject
       objectReference: {fileID: 0}
+    - target: {fileID: 194350546001932286, guid: 53c57ca4b0014324da5be46f95eeab0f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2014800381984844151, guid: 53c57ca4b0014324da5be46f95eeab0f,
         type: 3}
       propertyPath: Camera
@@ -1760,6 +1788,11 @@ PrefabInstance:
       propertyPath: _CharacterMovement
       value: 
       objectReference: {fileID: 77863788}
+    - target: {fileID: 6029425136046855772, guid: 53c57ca4b0014324da5be46f95eeab0f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8686070082904821430, guid: 53c57ca4b0014324da5be46f95eeab0f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1900,6 +1933,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 2. RifleObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959675360189627971, guid: e5799aeaed16d284f8fcbd26ff01312c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898024570599386539, guid: e5799aeaed16d284f8fcbd26ff01312c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4623953815652712580, guid: e5799aeaed16d284f8fcbd26ff01312c,
         type: 3}

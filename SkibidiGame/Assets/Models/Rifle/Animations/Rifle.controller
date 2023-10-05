@@ -32,7 +32,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Nothing
+  m_Name: RifleNothing
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -59,7 +59,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shaking
+  m_Name: RifleShaking
   m_Speed: 0.7
   m_CycleOffset: 0
   m_Transitions:
@@ -73,7 +73,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9117d44dd9dd2d5438ee4a4e08ee6a38, type: 2}
+  m_Motion: {fileID: 7400000, guid: 935ae4f0821be5349a776278e26209cb, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
