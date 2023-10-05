@@ -1,7 +1,7 @@
 using Sounds;
 using UnityEngine;
 
-public class Rifle : Gun
+public class Rifle : GunTap
 {
     public override void Shoot()
     {

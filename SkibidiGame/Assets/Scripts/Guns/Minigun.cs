@@ -1,12 +1,15 @@
 using Sounds;
 using UnityEngine;
+using UnityEngine.VFX;
 
-public class Pistol : GunTap
+public class Minigun : GunHold
 {
-    public override void Shoot()
+    public VisualEffect ShotVFX;
+    public AudioClip shotSound;
+    public GameObject ImpactVFX;
+
+    public void Fire()
     {
-        IsShooting = true;
-        Animator.SetTrigger("Shoot");
         ShotVFX.Play();
         SoundManager.Instance.PlaySound(shotSound);
 

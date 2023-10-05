@@ -1,7 +1,7 @@
 using Sounds;
 using UnityEngine;
 
-public class Shotgun : Gun
+public class Shotgun : GunTap
 {
     public int Bullets;
     public float maxDeviation;

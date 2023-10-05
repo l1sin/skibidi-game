@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.VFX;
 
 public class Gun : MonoBehaviour
 {
@@ -7,25 +6,13 @@ public class Gun : MonoBehaviour
     public Animator Animator;
     public Transform GunObject;
     public Camera Camera;
-    public VisualEffect ShotVFX;
-
-    public bool IsShooting;
-    public bool CanSwitch = true;
-   
-    public AudioClip shotSound;
-    public GameObject ImpactVFX;
     public LayerMask Targets;
-
+    public bool CanSwitch = true;
     public float Damage;
+    public bool IsShooting;
 
-    public void Update()
+    public void Walk()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && !IsShooting)
-        {
-            Shoot();
-            CanSwitch = false;
-        }
-
         if (CharacterInput.IsMoving && _CharacterMovement.IsGrounded)
         {
             Animator.SetBool("Walking", true);
@@ -41,6 +28,4 @@ public class Gun : MonoBehaviour
         IsShooting = false;
         CanSwitch = true;
     }
-
-    public virtual void Shoot() { }
 }
