@@ -14,6 +14,7 @@ public class Gun : MonoBehaviour
    
     public AudioClip shotSound;
     public GameObject ImpactVFX;
+    public LayerMask Targets;
 
     public float Damage;
 

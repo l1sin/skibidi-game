@@ -11,7 +11,7 @@ public class Rifle : Gun
         SoundManager.Instance.PlaySound(shotSound);
 
         RaycastHit HitInfo;
-        if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out HitInfo, 100.0f))
+        if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out HitInfo, 100.0f, Targets))
         {
             Transform objectHit = HitInfo.transform;
             GameObject particles = Instantiate(ImpactVFX, HitInfo.point, Quaternion.LookRotation(HitInfo.normal));

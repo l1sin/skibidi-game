@@ -22,9 +22,8 @@ public class Shotgun : Gun
             forwardVector = Quaternion.AngleAxis(angle, Vector3.forward) * forwardVector;
             forwardVector = Camera.transform.rotation * forwardVector;
 
-            if (Physics.Raycast(Camera.transform.position, forwardVector, out HitInfo, 100.0f))
+            if (Physics.Raycast(Camera.transform.position, forwardVector, out HitInfo, 100.0f, Targets))
             {
-                Debug.Log(Camera.transform.forward);
                 Transform objectHit = HitInfo.transform;
                 GameObject particles = Instantiate(ImpactVFX, HitInfo.point, Quaternion.LookRotation(HitInfo.normal));
                 particles.transform.SetParent(objectHit);
