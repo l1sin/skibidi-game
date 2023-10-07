@@ -3,12 +3,13 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     public GameObject[] Weapons;
+    public Gun[] AllGuns;
     public Gun CurrentGun;
     public void Update()
     {
         if (CurrentGun.CanSwitch)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1) && CurrentGun != AllGuns[0])
             {
                 foreach (GameObject w in Weapons)
                 {
@@ -18,7 +19,7 @@ public class WeaponController : MonoBehaviour
                 CurrentGun = Weapons[0].GetComponent<Gun>();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha2) && CurrentGun != AllGuns[1])
             {
                 foreach (GameObject w in Weapons)
                 {
@@ -28,7 +29,7 @@ public class WeaponController : MonoBehaviour
                 CurrentGun = Weapons[1].GetComponent<Gun>();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha3))
+            if (Input.GetKeyDown(KeyCode.Alpha3) && CurrentGun != AllGuns[2])
             {
                 foreach (GameObject w in Weapons)
                 {
@@ -38,7 +39,7 @@ public class WeaponController : MonoBehaviour
                 CurrentGun = Weapons[2].GetComponent<Gun>();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha4))
+            if (Input.GetKeyDown(KeyCode.Alpha4) && CurrentGun != AllGuns[3])
             {
                 foreach (GameObject w in Weapons)
                 {
@@ -48,7 +49,7 @@ public class WeaponController : MonoBehaviour
                 CurrentGun = Weapons[3].GetComponent<Gun>();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha5))
+            if (Input.GetKeyDown(KeyCode.Alpha5) && CurrentGun != AllGuns[4])
             {
                 foreach (GameObject w in Weapons)
                 {
@@ -58,7 +59,7 @@ public class WeaponController : MonoBehaviour
                 CurrentGun = Weapons[4].GetComponent<Gun>();
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha6))
+            if (Input.GetKeyDown(KeyCode.Alpha6) && CurrentGun != AllGuns[5])
             {
                 foreach (GameObject w in Weapons)
                 {
