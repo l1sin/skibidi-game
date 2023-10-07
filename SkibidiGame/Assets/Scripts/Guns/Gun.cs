@@ -23,7 +23,7 @@ public class Gun : MonoBehaviour
         }
     }
 
-    public void EndShooting()
+    public virtual void EndShooting()
     {
         IsShooting = false;
         CanSwitch = true;

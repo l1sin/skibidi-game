@@ -8,6 +8,21 @@ public class Minigun : GunHold
     public AudioClip shotSound;
     public GameObject ImpactVFX;
 
+    public override void Update()
+    {
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            IsShooting = true;
+            CanSwitch = false;
+            Animator.SetBool("IsShooting", IsShooting);
+        }
+        else
+        {
+            Animator.SetBool("IsShooting", IsShooting);
+        }
+        Walk();
+    }
+
     public void Fire()
     {
         ShotVFX.Play();
