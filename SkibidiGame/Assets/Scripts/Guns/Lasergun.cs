@@ -7,7 +7,10 @@ public class Lasergun : GunHold
     public GameObject ImpactVFX;
     public AudioSource LaserSFX;
 
-
+    private void Awake()
+    {
+        MaterialPropertyBlock _materialPropertyBlock = new MaterialPropertyBlock();
+    }
 
     public override void Update()
     {
@@ -31,7 +34,6 @@ public class Lasergun : GunHold
         ImpactVFX.SetActive(true);
         Animator.SetBool("IsShooting", IsShooting);
         Fire();
-        //SoundManager.Instance.PlaySound(shotSound);
     }
 
     public void Fire()
