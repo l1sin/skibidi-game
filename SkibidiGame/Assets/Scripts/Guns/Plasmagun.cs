@@ -27,10 +27,6 @@ public class Plasmagun : GunTap
             visualEffect.SetFloat("Size", Radius);
             Destroy(particles, 5);
 
-            Debug.Log(HitInfo.distance);
-
-            
-
             Collider[] targets = Physics.OverlapSphere(HitInfo.point, Radius, Targets);
             foreach (Collider target in targets)
             {
@@ -39,7 +35,14 @@ public class Plasmagun : GunTap
                 {
                     enemy.GetDamage(Damage);
                 }
-            } 
+            }
+        }
+        else
+        {
+            GameObject beamObj = Instantiate(PlasmaBeamVFX, ShootingPoint.position, Quaternion.identity);
+            beamObj.transform.LookAt(Camera.transform.position + Camera.transform.forward * 20f);
+            beamObj.transform.localScale = new Vector3(1, 1, 20);
+            Destroy(beamObj, 5);
         }
     }
 }
