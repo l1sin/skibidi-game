@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 963491048973523985}
   - component: {fileID: 705024533961104455}
   - component: {fileID: 6409883935196877037}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 4. MinigunObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
   Damage: 1
   IsShooting: 0
   ShotVFX: {fileID: 9089888455154840331}
-  shotSound: {fileID: 8300000, guid: a20f9c3e54afb004ab8ad72e47f70ab8, type: 3}
+  shotSound: {fileID: 8300000, guid: e0dae7ef0e25b4348a4fce539e583e89, type: 3}
   ImpactVFX: {fileID: 8449783667161613993, guid: 12b310721abba6140b52576b8d8f29a4,
     type: 3}
 --- !u!1001 &627539079972153081
@@ -249,10 +249,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1782367492328138593, guid: d02c2e67d8e1dfa4abd6e63267326a34,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d02c2e67d8e1dfa4abd6e63267326a34,
         type: 3}
       propertyPath: m_Name
       value: Minigun
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d02c2e67d8e1dfa4abd6e63267326a34,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

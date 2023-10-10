@@ -44,7 +44,6 @@ public class Lasergun : GunHold
             Transform objectHit = HitInfo.transform;
             Line.SetPosition(1, Line.transform.InverseTransformPoint(HitInfo.point));
             ImpactVFX.transform.position = HitInfo.point;
-            Debug.Log(HitInfo.point);
 
             Enemy enemy = objectHit.GetComponentInParent<Enemy>();
             if (enemy != null)

@@ -71,16 +71,16 @@ MonoBehaviour:
   Animator: {fileID: 5148368978652694793}
   GunObject: {fileID: 4109444174767182722}
   Camera: {fileID: 0}
-  ShotVFX: {fileID: 8433523526178424382}
-  IsShooting: 0
-  CanSwitch: 1
-  shotSound: {fileID: 8300000, guid: 3691bf51b168c2448b50e41fe8a05c16, type: 3}
-  ImpactVFX: {fileID: 8449783667161613993, guid: 12b310721abba6140b52576b8d8f29a4,
-    type: 3}
   Targets:
     serializedVersion: 2
     m_Bits: 119
+  CanSwitch: 1
   Damage: 1
+  IsShooting: 0
+  ShotVFX: {fileID: 8433523526178424382}
+  shotSound: {fileID: 8300000, guid: 68c8cd0b1bc4a964895dac7c3263778e, type: 3}
+  ImpactVFX: {fileID: 8449783667161613993, guid: 12b310721abba6140b52576b8d8f29a4,
+    type: 3}
 --- !u!1001 &259333986369934284
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,17 +1,19 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform FollowTarget;
     public Transform LookTarget;
-    public CharacterController Controller;
     public Transform Body;
     public Transform Head;
     public float Speed;
 
     public float HealthMax;
     public float HealthCurrent;
+
+    public NavMeshAgent Agent;
+    public Transform Destination;
+
 
     public void Awake()
     {
@@ -20,17 +22,13 @@ public class Enemy : MonoBehaviour
 
     public void Update()
     {
-        Follow();
         LookAtPlayer();
+        NavMeshFollow();
     }
 
-    public void Follow()
+    public void NavMeshFollow()
     {
-        Vector3 move = (FollowTarget.position - transform.position).normalized;
-        move.y = 0;
-        Controller.Move(move * Speed * Time.deltaTime);
-        float RotationY = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
-        Body.localRotation = Quaternion.Euler(0, RotationY, 0);
+        Agent.destination = Destination.position;
     }
 
     public void LookAtPlayer()

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8812990208983169390}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8201518164907891228}
   - component: {fileID: 8573507891756592667}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2769327387769231990}
   - component: {fileID: 7266361264444904755}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LaserSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,13 +308,13 @@ GameObject:
   - component: {fileID: 1981706266448289368}
   - component: {fileID: 2417115346728349485}
   - component: {fileID: 8492191003144209700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 5. LasergunObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1981706266448289368
 Transform:
   m_ObjectHideFlags: 0
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 354530968728478067}
   - component: {fileID: 8536366720480680338}
   - component: {fileID: 2766557663496568847}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LaserMuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,6 +520,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserImpactVFX
       objectReference: {fileID: 0}
+    - target: {fileID: 6162951195209745244, guid: d71d99c98191e8941a9f0a562b204ebe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9068812462556232565, guid: d71d99c98191e8941a9f0a562b204ebe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -649,6 +654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lasergun
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4ab5496d13c7a74b939149f53029c01,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

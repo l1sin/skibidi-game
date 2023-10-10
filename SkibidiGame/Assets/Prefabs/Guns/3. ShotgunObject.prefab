@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 8686070082904821430}
   - component: {fileID: 2942492549941700953}
   - component: {fileID: 2014800381984844151}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 3. ShotgunObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8686070082904821430
 Transform:
   m_ObjectHideFlags: 0
@@ -71,12 +71,16 @@ MonoBehaviour:
   Animator: {fileID: 2942492549941700953}
   GunObject: {fileID: 8686070082904821430}
   Camera: {fileID: 0}
-  ShotVFX: {fileID: 883034603359066360}
+  Targets:
+    serializedVersion: 2
+    m_Bits: 119
+  CanSwitch: 1
+  Damage: 1
   IsShooting: 0
-  shotSound: {fileID: 8300000, guid: 2b60d60a77878284fa16ec4dbfc5bcd5, type: 3}
+  ShotVFX: {fileID: 883034603359066360}
+  shotSound: {fileID: 8300000, guid: f4cbf806adb671045870f6c6f7623ec5, type: 3}
   ImpactVFX: {fileID: 8449783667161613993, guid: 12b310721abba6140b52576b8d8f29a4,
     type: 3}
-  Damage: 1
   Bullets: 5
   maxDeviation: 5
 --- !u!1001 &7000917596199874922
@@ -137,10 +141,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8411699214803250028, guid: a3274c4d4117af943bcdaf99abdc431e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a3274c4d4117af943bcdaf99abdc431e,
         type: 3}
       propertyPath: m_Name
       value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3274c4d4117af943bcdaf99abdc431e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -235,10 +249,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFXMuzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 2533155862206224645, guid: ad7589e81b60bed469fb888a3b31e44c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2989628639596632918, guid: ad7589e81b60bed469fb888a3b31e44c,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
