@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    public Transform LookPoint;
     public Transform LookTarget;
     public Transform Body;
     public Transform Head;
@@ -14,16 +16,44 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent Agent;
     public Transform Destination;
 
+    public LayerMask ViewMask;
+    public bool detected;
+
 
     public void Awake()
     {
         HealthCurrent = HealthMax;
+        detected = false;
+        StartCoroutine(LookForPlayer());
     }
 
     public void Update()
     {
-        LookAtPlayer();
-        NavMeshFollow();
+        if (detected)
+        {
+            LookAtPlayer();
+            NavMeshFollow();
+        }
+    }
+
+    public IEnumerator LookForPlayer()
+    {
+        yield return new WaitForSeconds(1);
+        if (Physics.Raycast(LookPoint.position, Destination.position - LookPoint.position, out RaycastHit hitInfo,  100, ViewMask))
+        {
+            if (hitInfo.transform.gameObject.layer == 7)
+            {
+                detected = true;
+            }
+            else
+            {
+                StartCoroutine(LookForPlayer());
+            }
+        }
+        else
+        {
+            StartCoroutine(LookForPlayer());
+        }
     }
 
     public void NavMeshFollow()
