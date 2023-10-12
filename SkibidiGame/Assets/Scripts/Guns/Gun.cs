@@ -13,10 +13,15 @@ public class Gun : MonoBehaviour
     public bool IsShooting;
     public float StartAmmo;
     public float Ammo;
+    public float GunLevel;
+    public float AnimationSpeedModifyer;
 
     public void Awake()
     {
         Ammo = StartAmmo;
+        Damage *= 1 + (GunLevel - 1) * 0.1f;
+        AnimationSpeedModifyer *= 1 + (GunLevel - 1) * 0.1f;
+        Animator.SetFloat("AnimationSpeedModifyer", AnimationSpeedModifyer);
     }
 
     public void Walk()

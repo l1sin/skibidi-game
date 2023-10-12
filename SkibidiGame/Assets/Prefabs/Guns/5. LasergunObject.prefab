@@ -375,7 +375,10 @@ MonoBehaviour:
   CanSwitch: 1
   Damage: 10
   IsShooting: 0
+  StartAmmo: 60
   Ammo: 60
+  GunLevel: 1
+  AnimationSpeedModifyer: 1
   LaserBeam: {fileID: 3517683224650635633}
   Line: {fileID: 8573507891756592667}
   ImpactVFX: {fileID: 1272641967309899641}

@@ -78,7 +78,10 @@ MonoBehaviour:
   CanSwitch: 1
   Damage: 30
   IsShooting: 0
+  StartAmmo: 10
   Ammo: 10
+  GunLevel: 1
+  AnimationSpeedModifyer: 1
   ShotVFX: {fileID: 2851298826640750812}
   shotSound: {fileID: 8300000, guid: c2555ad636435964d9f199e7dad1ef62, type: 3}
   ImpactVFX: {fileID: 3698927051728140293, guid: 50aff93a7cdde114fb7cf31b6d12fb46,
