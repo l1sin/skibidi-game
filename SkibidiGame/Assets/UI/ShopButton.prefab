@@ -28,6 +28,21 @@ PrefabInstance:
       propertyPath: m_fontSizeMax
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 4285632883876394235, guid: 42f63d9868b577743b209a1907ebd613,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285632883876394235, guid: 42f63d9868b577743b209a1907ebd613,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285632883876394235, guid: 42f63d9868b577743b209a1907ebd613,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9245283
+      objectReference: {fileID: 0}
     - target: {fileID: 8900272315581892509, guid: 42f63d9868b577743b209a1907ebd613,
         type: 3}
       propertyPath: m_Pivot.x

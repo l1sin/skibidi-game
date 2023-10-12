@@ -6,17 +6,20 @@ public class Lasergun : GunHold
     public LineRenderer Line;
     public GameObject ImpactVFX;
     public AudioSource LaserSFX;
-
-    private void Awake()
-    {
-        MaterialPropertyBlock _materialPropertyBlock = new MaterialPropertyBlock();
-    }
+    public float AmmoConsumption;
 
     public override void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            Shoot();
+            if (Ammo > 0)
+            {
+                Shoot();
+            }
+            else
+            {
+                EndShooting();
+            }
         }
         else
         {
@@ -26,7 +29,7 @@ public class Lasergun : GunHold
     }
 
     public void Shoot()
-    {
+    {  
         if (!IsShooting) LaserSFX.Play();
         IsShooting = true;
         CanSwitch = false;
@@ -38,6 +41,7 @@ public class Lasergun : GunHold
 
     public void Fire()
     {
+        UpdateAmmo(AmmoConsumption * Time.deltaTime);
         RaycastHit HitInfo;
         if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out HitInfo, 100.0f, Targets))
         {

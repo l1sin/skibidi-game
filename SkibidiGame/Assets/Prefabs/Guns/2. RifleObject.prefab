@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee6f72eb9a798a4e94c0aa6f70327cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WeaponController: {fileID: 0}
   _CharacterMovement: {fileID: 0}
   Animator: {fileID: 3067658239188331448}
   GunObject: {fileID: 9131857724792124438}
@@ -77,6 +78,7 @@ MonoBehaviour:
   CanSwitch: 1
   Damage: 1
   IsShooting: 0
+  Ammo: 150
   ShotVFX: {fileID: 7635125075018523407}
   shotSound: {fileID: 8300000, guid: eb834e929e64a8b47a8e1db5356fd72f, type: 3}
   ImpactVFX: {fileID: 8449783667161613993, guid: 12b310721abba6140b52576b8d8f29a4,

@@ -6,6 +6,7 @@ public class Pistol : GunTap
     public override void Shoot()
     {
         IsShooting = true;
+        CanSwitch = false;
         Animator.SetTrigger("Shoot");
         ShotVFX.Play();
         SoundManager.Instance.PlaySound(shotSound);
@@ -24,5 +25,11 @@ public class Pistol : GunTap
                 enemy.GetDamage(Damage);
             }
         }
+    }
+
+    public override void UpdateAmmo(float ammoConsumption)
+    {
+        Ammo -= ammoConsumption;
+        WeaponController.UpdateAmmoText(9999);
     }
 }

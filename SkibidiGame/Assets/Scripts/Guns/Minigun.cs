@@ -12,9 +12,17 @@ public class Minigun : GunHold
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            IsShooting = true;
-            CanSwitch = false;
-            Animator.SetBool("IsShooting", IsShooting);
+            if (Ammo > 2)
+            {
+                IsShooting = true;
+                CanSwitch = false;
+                Animator.SetBool("IsShooting", IsShooting);
+            }
+            else
+            {
+                EndShooting();
+                Animator.SetBool("IsShooting", IsShooting);
+            }
         }
         else
         {
@@ -25,6 +33,7 @@ public class Minigun : GunHold
 
     public void Fire()
     {
+        UpdateAmmo(1);
         ShotVFX.Play();
         SoundManager.Instance.PlaySound(shotSound);
 

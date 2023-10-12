@@ -12,7 +12,6 @@ public class GunTap : Gun
         if (Input.GetKey(KeyCode.Mouse0) && !IsShooting)
         {
             Shoot();
-            CanSwitch = false;
         }
 
         Walk();

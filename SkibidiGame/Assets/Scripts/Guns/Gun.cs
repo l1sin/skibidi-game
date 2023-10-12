@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    public WeaponController WeaponController;
     public CharacterMovement _CharacterMovement;
     public Animator Animator;
     public Transform GunObject;
@@ -10,6 +11,13 @@ public class Gun : MonoBehaviour
     public bool CanSwitch = true;
     public float Damage;
     public bool IsShooting;
+    public float StartAmmo;
+    public float Ammo;
+
+    public void Awake()
+    {
+        Ammo = StartAmmo;
+    }
 
     public void Walk()
     {
@@ -27,5 +35,11 @@ public class Gun : MonoBehaviour
     {
         IsShooting = false;
         CanSwitch = true;
+    }
+
+    public virtual void UpdateAmmo(float ammoConsumption)
+    {
+        Ammo -= ammoConsumption;
+        WeaponController.UpdateAmmoText(Ammo);
     }
 }

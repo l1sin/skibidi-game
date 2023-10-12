@@ -364,6 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba9c734347bc0054db493a2ae216ebc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WeaponController: {fileID: 0}
   _CharacterMovement: {fileID: 0}
   Animator: {fileID: 2417115346728349485}
   GunObject: {fileID: 1981706266448289368}
@@ -372,12 +373,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 119
   CanSwitch: 1
-  Damage: 30
+  Damage: 10
   IsShooting: 0
+  Ammo: 60
   LaserBeam: {fileID: 3517683224650635633}
   Line: {fileID: 8573507891756592667}
   ImpactVFX: {fileID: 1272641967309899641}
   LaserSFX: {fileID: 7266361264444904755}
+  AmmoConsumption: 5
 --- !u!1 &7284286079955426074
 GameObject:
   m_ObjectHideFlags: 0
