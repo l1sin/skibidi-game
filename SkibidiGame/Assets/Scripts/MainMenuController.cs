@@ -56,7 +56,10 @@ public class MainMenuController : MonoBehaviour
 
     public void UnlockLevels()
     {
-        for (int i = 0; i <= Level; i++)
+        int count;
+        if (Level > LevelButtons.Length) count = LevelButtons.Length;
+        else count = Level;
+        for (int i = 0; i < count; i++)
         {
             LevelButtons[i].interactable = true;
         }
@@ -159,6 +162,21 @@ public class MainMenuController : MonoBehaviour
             }
         }
         return priceList;
+    }
+
+    public DataPass PassData()
+    {
+        Progress progress = new Progress();
+        progress.Money = Money;
+        progress.Level = Level;
+        progress.UpgradeLevel = UpgradeLevel;
+        progress.GunLevel = GunLevel;
+        progress.LevelRank = LevelRank;
+        GameObject dataPass = new GameObject();
+        DataPass ProgressData = dataPass.AddComponent<DataPass>();
+        ProgressData.Progress = progress;
+        DontDestroyOnLoad(dataPass);
+        return ProgressData;
     }
 }
 
