@@ -4300,7 +4300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1119661412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9727,6 +9727,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3135260989270663158, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelUpUpgradeOnce
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135260989270663158, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuyButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135260989270663158, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3439113061522944329, guid: 52de7e435fdae6042aea00476faeac96,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -9816,6 +9831,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029002397092703786, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelUpUpgradeOnce
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029002397092703786, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuyButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029002397092703786, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212871160512543553, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelUpUpgradeOnce
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212871160512543553, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuyButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212871160512543553, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4542240498637917342, guid: 52de7e435fdae6042aea00476faeac96,
         type: 3}
@@ -9922,6 +9967,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4627706213202751582, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 4679629462780458957, guid: 52de7e435fdae6042aea00476faeac96,
         type: 3}
       propertyPath: m_Name
@@ -9932,6 +9982,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AmmoUpgradeBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 4973529665959263635, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 4995297581779721511, guid: 52de7e435fdae6042aea00476faeac96,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -9992,6 +10047,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5231913156692961528, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231913156692961528, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 5410410342626491596, guid: 52de7e435fdae6042aea00476faeac96,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -10027,6 +10092,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthUpgradeBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 5595179252802610485, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595179252802610485, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 5612383346197627275, guid: 52de7e435fdae6042aea00476faeac96,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -10182,6 +10257,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6444314573681462351, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444314573681462351, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 6635632212733977916, guid: 52de7e435fdae6042aea00476faeac96,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -10212,6 +10297,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6652838503961264514, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652838503961264514, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 6713315118587265483, guid: 52de7e435fdae6042aea00476faeac96,
         type: 3}
       propertyPath: m_Pivot.x
@@ -10550,6 +10645,36 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 1750215727971590259, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750215727971590259, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750215727971590259, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
+    - target: {fileID: 2123288101731397054, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123288101731397054, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2123288101731397054, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 2397107570487211081, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -10745,6 +10870,36 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3045998074498299284, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045998074498299284, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045998074498299284, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
+    - target: {fileID: 3168013211404927308, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelUpGunOnce
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168013211404927308, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuyButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3168013211404927308, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3314999392514209808, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
       propertyPath: m_Pivot.x
@@ -10875,6 +11030,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3420734285017102425, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420734285017102425, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420734285017102425, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 3600438871185541534, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -10910,6 +11080,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShotgunUpgradeBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 3680470734683490693, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680470734683490693, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 3685566940090424934, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -11045,6 +11225,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3904273478543000648, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3904273478543000648, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 3925342571241383164, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -11105,6 +11295,51 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4114029379101223722, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelUpGunOnce
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114029379101223722, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuyButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114029379101223722, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301007607171567907, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301007607171567907, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301007607171567907, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
+    - target: {fileID: 4507350098312289518, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507350098312289518, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4507350098312289518, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 4523991173051398224, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -11235,6 +11470,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 4954705880340682737, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelUpGunOnce
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954705880340682737, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuyButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954705880340682737, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4983084373483848605, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -11300,6 +11550,36 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5286202410472096410, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelUpGunOnce
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286202410472096410, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuyButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286202410472096410, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475133978907211923, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475133978907211923, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475133978907211923, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 5485953071553082693, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -11365,6 +11645,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 5676499195974939998, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676499195974939998, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676499195974939998, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 5782707465604210810, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
       propertyPath: m_Name
@@ -11490,6 +11785,51 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 6388898854330738221, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelUpGunOnce
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388898854330738221, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuyButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388898854330738221, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420841757239350005, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420841757239350005, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420841757239350005, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
+    - target: {fileID: 6640000362355892024, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ItemIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6640000362355892024, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: _ItemType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6640000362355892024, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: MainMenuController
+      value: 
+      objectReference: {fileID: 1119661412}
     - target: {fileID: 6670233408988088466, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -11714,6 +12054,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684936854482351050, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LevelUpGunOnce
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684936854482351050, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuyButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684936854482351050, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8283714095030021289, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}

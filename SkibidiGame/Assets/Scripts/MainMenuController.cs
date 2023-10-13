@@ -23,6 +23,10 @@ public class MainMenuController : MonoBehaviour
 
     public bool CanLoadData;
 
+    [Header("Data")]
+    public int[,] UpgradePrices;
+    public int[,] GunPrices;
+
     public void Start()
     {
         if (CanLoadData)
@@ -35,6 +39,8 @@ public class MainMenuController : MonoBehaviour
         SetMoney();
         UnlockUpgrades();
         UnlockGuns();
+        ReadCSV(UpgradePrices, "UpgradePrices");
+        ReadCSV(GunPrices, "GunPrices");
     }
 
     public void LoadData()
@@ -100,11 +106,41 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
+    public void UnlockUpgrades(int index)
+    {
+        UpgradeBlocks[index].UnlockLockers(UpgradeLevel[index]);
+    }
+
     public void UnlockGuns()
     {
         for (int i = 0; i < GunBlocks.Length; i++)
         {
             GunBlocks[i].UnlockLockers(GunLevel[i]);
+        }
+    }
+
+    public void UnlockGuns(int index)
+    {
+        GunBlocks[index].UnlockLockers(GunLevel[index]);
+    }
+
+    public void ReadCSV(int[,] priceList, string path)
+    {
+        TextAsset ta = Resources.Load<TextAsset>($"Prices/{path}");
+        string[] lines = ta.text.Split('\n', System.StringSplitOptions.None);
+        for (int i = 1; i < lines.Length; i++)
+        {
+            string[] values = lines[i].Split(';', System.StringSplitOptions.None);
+
+            if (i == 1)
+            {
+                priceList = new int[lines.Length - 1, values.Length - 1];
+            } 
+
+            for (int j = 1; j < values.Length; j++)
+            {
+                priceList[i - 1 , j - 1] = int.Parse(values[j]);
+            }
         }
     }
 }
