@@ -16,6 +16,7 @@ public class UpgradeBlock : MonoBehaviour
     public TextMeshProUGUI BuyAllButtonText;
     public int ItemIndex;
     public ItemType _ItemType;
+    public int Price;
     public enum ItemType
     {
         Upgrade,
@@ -34,27 +35,57 @@ public class UpgradeBlock : MonoBehaviour
         BuyAllButton.onClick.RemoveAllListeners();
     }
 
+    public void Awake()
+    {
+        UpdatePrice();
+    }
+
     public void CheckPrice()
     {
-
+        if (_ItemType == ItemType.Upgrade)
+        {
+            Price = MainMenuController.UpgradePrices[ItemIndex, MainMenuController.UpgradeLevel[ItemIndex]];
+        }
+        else if (_ItemType == ItemType.Gun)
+        {
+            Price = MainMenuController.GunPrices[ItemIndex, MainMenuController.GunLevel[ItemIndex]];
+        }
+        BuyOneButtonText.text = Price.ToString();
     }
 
     public void CheckMoney()
     {
-
+        if (Price > MainMenuController.Money)
+        {
+            BuyOneButton.interactable = false;
+        }
+        else
+        {
+            BuyOneButton.interactable = true;
+        }
     }
 
-    public void CheckIfMaxLevel()
+    public bool CheckIfMaxLevel()
     {
         if (_ItemType == ItemType.Upgrade && MainMenuController.UpgradeLevel[ItemIndex] >= 5)
         {
             BuyOneButton.interactable = false;
             BuyAllButton.interactable = false;
+            BuyOneButtonText.text = "Sold";
+            BuyAllButtonText.text = "Sold";
+            return true;
         }
         else if (_ItemType == ItemType.Gun && MainMenuController.GunLevel[ItemIndex] >= 5)
         {
             BuyOneButton.interactable = false;
             BuyAllButton.interactable = false;
+            BuyOneButtonText.text = "Sold";
+            BuyAllButtonText.text = "Sold";
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
@@ -68,7 +99,16 @@ public class UpgradeBlock : MonoBehaviour
         {
             UnlockLockers(++MainMenuController.GunLevel[ItemIndex]);
         }
-        CheckIfMaxLevel();
+        MainMenuController.SpendMoney(Price);
+    }
+
+    public void UpdatePrice()
+    {
+        if (!CheckIfMaxLevel())
+        {
+            CheckPrice();
+            CheckMoney();
+        }
     }
 
     public void BuyAllOnClick()

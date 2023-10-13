@@ -4397,7 +4397,7 @@ MonoBehaviour:
   - {fileID: 1187120745}
   - {fileID: 663522382}
   - {fileID: 384259531}
-  Money: 1200
+  Money: 23400
   Level: 30
   UpgradeLevel: 010000000400000002000000
   GunLevel: 010000000400000004000000050000000200000001000000
@@ -4433,7 +4433,7 @@ MonoBehaviour:
   - 
   - 
   - 
-  CanLoadData: 1
+  CanLoadData: 0
 --- !u!4 &1119661413
 Transform:
   m_ObjectHideFlags: 0
