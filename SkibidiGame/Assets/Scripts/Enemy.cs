@@ -2,10 +2,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamageable
 {
     public Transform LookPoint;
     public Transform LookTarget;
+    public CharacterHealth CharacterHealth;
+    public LevelController LevelController;
     public Transform Body;
     public Transform Head;
     public float Speed;
@@ -19,12 +21,19 @@ public class Enemy : MonoBehaviour
     public LayerMask ViewMask;
     public bool detected;
 
+    public float AttackRange;
+    public float Damage;
 
-    public void Awake()
+    public Animator Animator;
+
+    public bool IsAlive = true;
+
+    public void Start()
     {
         HealthCurrent = HealthMax;
         detected = false;
         StartCoroutine(LookForPlayer());
+        Animator.SetBool("IsAttacking", false);
     }
 
     public void Update()
@@ -33,6 +42,7 @@ public class Enemy : MonoBehaviour
         {
             LookAtPlayer();
             NavMeshFollow();
+            Attack();
         }
     }
 
@@ -68,14 +78,32 @@ public class Enemy : MonoBehaviour
 
     public void GetDamage(float damage)
     {
-        HealthCurrent -= damage;
-        if (HealthCurrent <= 0)
+        if (IsAlive)
         {
-            Die();
+            HealthCurrent -= damage;
+            if (HealthCurrent <= 0)
+            {
+                IsAlive = false;
+                Die();
+            }
         }
     }
     public void Die()
     {
+        LevelController.OnEnemyKilled();
         Destroy(gameObject);
+    }
+
+    public void Attack()
+    {
+        if (Agent.remainingDistance <= AttackRange && Agent.remainingDistance != 0)
+        {
+            CharacterHealth.GetDamage(Damage * Time.deltaTime);
+            Animator.SetBool("IsAttacking", true);
+        }
+        else
+        {
+            Animator.SetBool("IsAttacking", false);
+        }
     }
 }

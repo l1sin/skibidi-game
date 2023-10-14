@@ -1,4 +1,5 @@
 using Sounds;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -33,9 +34,14 @@ public class Plasmagun : GunTap
                 Destroy(particles, 5);
 
                 Collider[] targets = Physics.OverlapSphere(HitInfo.point, Radius, Targets);
+                HashSet <Enemy> enemies = new HashSet<Enemy>();
+
                 foreach (Collider target in targets)
                 {
-                    Enemy enemy = target.GetComponentInParent<Enemy>();
+                    enemies.Add(target.GetComponentInParent<Enemy>());
+                }
+                foreach (Enemy enemy in enemies)
+                {
                     if (enemy != null)
                     {
                         enemy.GetDamage(Damage);

@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    [SerializeField] private float _speed;
+    public float Speed;
+    public float SpeedBonus;
     [SerializeField] private float _jumpHeight;
     [SerializeField] private CharacterController _characterController;
     private Vector3 _movement;
@@ -18,6 +19,11 @@ public class CharacterMovement : MonoBehaviour
         Move();
     }
 
+    public void SetSpeedLevel(int SpeedLevel)
+    {
+        Speed *= 1 + SpeedLevel * SpeedBonus;
+    }
+
     private void Move()
     {
         IsGrounded = Physics.CheckSphere(_groundCheck.position, _groundCheckRadius, _whatIsGround);
@@ -30,7 +36,7 @@ public class CharacterMovement : MonoBehaviour
         float x = CharacterInput.MoveInputX;
         float z = CharacterInput.MoveInputY;
         _movement = transform.right * x + transform.forward * z;
-        _characterController.Move(_movement * _speed * Time.unscaledDeltaTime);
+        _characterController.Move(_movement * Speed * Time.unscaledDeltaTime);
         
 
         if (Input.GetButtonDown("Jump") && IsGrounded)
