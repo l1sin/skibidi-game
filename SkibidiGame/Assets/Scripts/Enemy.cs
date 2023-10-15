@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour, IDamageable
     public LevelController LevelController;
     public Transform Body;
     public Transform Head;
-    public float Speed;
 
     public float HealthMax;
     public float HealthCurrent;
@@ -25,11 +24,15 @@ public class Enemy : MonoBehaviour, IDamageable
     public float Damage;
 
     public Animator Animator;
+    public float HealthBuff = 1;
+    public float SpeedBuff = 1;
+    public float DamageBuff = 1;
 
     public bool IsAlive = true;
 
     public void Start()
     {
+        Buff();
         HealthCurrent = HealthMax;
         detected = false;
         StartCoroutine(LookForPlayer());
@@ -96,7 +99,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void Attack()
     {
-        if (Agent.remainingDistance <= AttackRange && Agent.remainingDistance != 0)
+        if ((Destination.position - LookPoint.transform.position).magnitude < AttackRange)
         {
             CharacterHealth.GetDamage(Damage * Time.deltaTime);
             Animator.SetBool("IsAttacking", true);
@@ -105,5 +108,13 @@ public class Enemy : MonoBehaviour, IDamageable
         {
             Animator.SetBool("IsAttacking", false);
         }
+    }
+
+    public void Buff()
+    {
+        int difficulty = SaveManager.Instance.CurrentLevelDifficulty;
+        HealthMax *= 1 + difficulty * HealthBuff;
+        Damage *= 1 + difficulty * DamageBuff;
+        Agent.speed *= 1 + difficulty * SpeedBuff;
     }
 }

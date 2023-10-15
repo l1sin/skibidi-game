@@ -74,14 +74,18 @@ MonoBehaviour:
   Camera: {fileID: 0}
   Targets:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 375
   CanSwitch: 1
   Damage: 1
   IsShooting: 0
   StartAmmo: 300
+  AmmoLevel: 0
   Ammo: 300
   GunLevel: 1
   AnimationSpeedModifyer: 1
+  AmmoBonus: 0.2
+  DamageBonus: 0.125
+  AnimationSpeedBonus: 0.125
   ShotVFX: {fileID: 9089888455154840331}
   shotSound: {fileID: 8300000, guid: e0dae7ef0e25b4348a4fce539e583e89, type: 3}
   ImpactVFX: {fileID: 8449783667161613993, guid: 12b310721abba6140b52576b8d8f29a4,

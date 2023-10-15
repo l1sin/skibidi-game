@@ -371,19 +371,23 @@ MonoBehaviour:
   Camera: {fileID: 0}
   Targets:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 375
   CanSwitch: 1
   Damage: 10
   IsShooting: 0
   StartAmmo: 60
-  Ammo: 60
+  AmmoLevel: 0
+  Ammo: 30
   GunLevel: 1
   AnimationSpeedModifyer: 1
+  AmmoBonus: 0.2
+  DamageBonus: 0.35
+  AnimationSpeedBonus: 0.125
   LaserBeam: {fileID: 3517683224650635633}
   Line: {fileID: 8573507891756592667}
   ImpactVFX: {fileID: 1272641967309899641}
   LaserSFX: {fileID: 7266361264444904755}
-  AmmoConsumption: 5
+  AmmoConsumption: 2
 --- !u!1 &7284286079955426074
 GameObject:
   m_ObjectHideFlags: 0

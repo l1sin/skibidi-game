@@ -23,6 +23,7 @@ public class Gun : MonoBehaviour
 
     public void Start()
     {
+        Animator.keepAnimatorStateOnDisable = true;
         Ammo = StartAmmo * (1 + AmmoLevel * AmmoBonus);
         Damage *= 1 + (GunLevel - 1) * DamageBonus;
         AnimationSpeedModifyer *= 1 + (GunLevel - 1) * AnimationSpeedBonus;
