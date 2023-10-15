@@ -585,7 +585,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -915,7 +915,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -1210,7 +1210,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -1406,7 +1406,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -1779,7 +1779,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -2196,7 +2196,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -2404,7 +2404,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -2612,7 +2612,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -2945,7 +2945,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -3129,7 +3129,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -3321,6 +3321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
+      propertyPath: LevelDifficulty
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -3572,6 +3577,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
+      propertyPath: LevelDifficulty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
       propertyPath: MainMenuController
       value: 
       objectReference: {fileID: 1119661412}
@@ -3808,6 +3818,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
+      propertyPath: LevelDifficulty
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -4311,6 +4326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
+      propertyPath: LevelDifficulty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
       propertyPath: MainMenuController
       value: 
       objectReference: {fileID: 1119661412}
@@ -4466,43 +4486,44 @@ MonoBehaviour:
   - {fileID: 1187120745}
   - {fileID: 663522382}
   - {fileID: 384259531}
-  Money: 23400
-  Level: 30
-  UpgradeLevel: 010000000400000005000000
-  GunLevel: 010000000100000002000000030000000400000005000000
-  LevelRank:
-  - A
-  - B
-  - C
-  - C
-  - C
-  - A
-  - S
-  - S
-  - S
-  - S
-  - S
-  - A
-  - B
-  - B
-  - C
-  - D
-  - D
-  - D
-  - D
-  - A
-  - S
-  - A
-  - A
-  - A
-  - S
-  - D
-  - D
-  - D
-  - B
-  - C
-  - S
-  CanLoadData: 0
+  Progress:
+    Money: 0
+    Level: 0
+    UpgradeLevel: 000000000000000000000000
+    GunLevel: 010000000000000000000000000000000000000000000000
+    LevelRank:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  CanLoadData: 1
 --- !u!4 &1119661413
 Transform:
   m_ObjectHideFlags: 0
@@ -4703,7 +4724,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -4899,7 +4920,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -5225,6 +5246,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level1ButtonUnknown
       objectReference: {fileID: 0}
+    - target: {fileID: 6171248750025114437, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
+      propertyPath: LevelDifficulty
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: MainMenuController
@@ -5419,7 +5450,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -5615,7 +5646,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -5846,6 +5877,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
+      propertyPath: LevelDifficulty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
       propertyPath: MainMenuController
       value: 
       objectReference: {fileID: 1119661412}
@@ -6058,6 +6094,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
+      propertyPath: LevelDifficulty
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -6459,7 +6500,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -6628,6 +6669,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589972987}
   m_CullTransparentMesh: 1
+--- !u!1 &1598903680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1598903682}
+  - component: {fileID: 1598903681}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1598903681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598903680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa754c1bf066c464285908229b88049d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: save.json
+--- !u!4 &1598903682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598903680}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1658817839 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3904273478543000648, guid: af54bd56fef66df42b79796f06b77811,
@@ -6797,6 +6883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
+      propertyPath: LevelDifficulty
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -7029,7 +7120,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -7537,6 +7628,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
+      propertyPath: LevelDifficulty
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
       propertyPath: MainMenuController
       value: 
       objectReference: {fileID: 1119661412}
@@ -7806,7 +7902,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -8246,7 +8342,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -8543,7 +8639,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -8739,7 +8835,7 @@ PrefabInstance:
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
       propertyPath: LevelDifficulty
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -8943,6 +9039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
+      propertyPath: LevelDifficulty
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -9152,6 +9253,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
+        type: 3}
+      propertyPath: LevelDifficulty
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7118026824494357604, guid: 0c323a0b11cfe1f44879b9aa92647c4b,
         type: 3}
@@ -12350,3 +12456,4 @@ SceneRoots:
   - {fileID: 1219211900}
   - {fileID: 521329536}
   - {fileID: 1119661413}
+  - {fileID: 1598903682}

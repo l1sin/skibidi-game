@@ -14,6 +14,11 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private LayerMask _whatIsGround;
     public bool IsGrounded;
 
+    public void Start()
+    {
+        SetSpeedLevel(SaveManager.Instance.CurrentProgress.UpgradeLevel[1]);
+    }
+
     private void Update()
     {
         Move();

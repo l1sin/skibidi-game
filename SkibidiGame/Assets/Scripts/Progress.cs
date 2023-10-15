@@ -1,5 +1,4 @@
 using System;
-using UnityEngine;
 
 [Serializable]
 public class Progress
@@ -19,7 +18,7 @@ public class Progress
         LevelRank = new string[31];
         for (int i = 0; i < 31; i++)
         {
-            LevelRank[i] = "-";
+            LevelRank[i] = "";
         }
     }
 }

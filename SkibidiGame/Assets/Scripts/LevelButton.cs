@@ -7,8 +7,13 @@ public class LevelButton : MonoBehaviour
     public MainMenuController MainMenuController;
     public void LoadLevel(int index)
     {
-        DataPass data = MainMenuController.PassData();
-        data.Difficulty = LevelDifficulty;
+        SaveManager.Instance.CurrentLevelDifficulty = LevelDifficulty;
+        SaveManager.Instance.CurrentLevel = index + (10 * LevelDifficulty);
         SceneManager.LoadScene(index);
+    }
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1;
     }
 }

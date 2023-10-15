@@ -20,10 +20,16 @@ public class FPSCamera : MonoBehaviour
         RotateHorizontal();
     }
 
-    private void LockAndHideCursor()
+    public void LockAndHideCursor()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void ShowCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void RotateVertical()

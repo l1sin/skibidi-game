@@ -15,11 +15,7 @@ public class MainMenuController : MonoBehaviour
     public UpgradeBlock[] GunBlocks;
 
     [Header("SaveFile")]
-    public int Money;
-    public int Level;
-    public int[] UpgradeLevel;
-    public int[] GunLevel;
-    public string[] LevelRank;
+    public Progress Progress;
 
     public bool CanLoadData;
 
@@ -46,20 +42,18 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadData()
     {
-        Progress progress = new Progress();
-        Money = progress.Money;
-        Level = progress.Level;
-        UpgradeLevel = progress.UpgradeLevel;
-        GunLevel = progress.GunLevel;
-        LevelRank = progress.LevelRank;
+        Progress = SaveManager.Instance.LoadData();
+    }
+    public void SaveData()
+    {
+        SaveManager.Instance.SaveData(Progress);
     }
 
     public void UnlockLevels()
     {
-        int count;
-        if (Level > LevelButtons.Length) count = LevelButtons.Length;
-        else count = Level;
-        for (int i = 0; i < count; i++)
+        int count = Progress.Level;
+        if (count > LevelButtons.Length - 1) count = LevelButtons.Length - 1;
+        for (int i = 0; i <= count; i++)
         {
             LevelButtons[i].interactable = true;
         }
@@ -69,7 +63,7 @@ public class MainMenuController : MonoBehaviour
     {
         for (int i = 0; i < Ranks.Length; i++)
         {
-            string r = LevelRank[i];
+            string r = Progress.LevelRank[i];
             Ranks[i].text = r;
             Ranks[i].color = SetRankColor(r);
         }
@@ -92,19 +86,19 @@ public class MainMenuController : MonoBehaviour
     {
         for (int i = 0; i < 30; i++)
         {
-            if (LevelRank[i] != "S") return;
+            if (Progress.LevelRank[i] != "S") return;
         }
         LastLevelButton.interactable = true;
     }
 
     public void SetMoney()
     {
-        MoneyText.text = Money.ToString();
+        MoneyText.text = Progress.Money.ToString();
     }
 
     public void SpendMoney(int money)
     {
-        Money -= money;
+        Progress.Money -= money;
         SetMoney();
         UpdateBlocks();
     }
@@ -124,26 +118,26 @@ public class MainMenuController : MonoBehaviour
     {
         for (int i = 0; i < UpgradeBlocks.Length; i++)
         {
-            UpgradeBlocks[i].UnlockLockers(UpgradeLevel[i]);
+            UpgradeBlocks[i].UnlockLockers(Progress.UpgradeLevel[i]);
         }
     }
 
     public void UnlockUpgrades(int index)
     {
-        UpgradeBlocks[index].UnlockLockers(UpgradeLevel[index]);
+        UpgradeBlocks[index].UnlockLockers(Progress.UpgradeLevel[index]);
     }
 
     public void UnlockGuns()
     {
         for (int i = 0; i < GunBlocks.Length; i++)
         {
-            GunBlocks[i].UnlockLockers(GunLevel[i]);
+            GunBlocks[i].UnlockLockers(Progress.GunLevel[i]);
         }
     }
 
     public void UnlockGuns(int index)
     {
-        GunBlocks[index].UnlockLockers(GunLevel[index]);
+        GunBlocks[index].UnlockLockers(Progress.GunLevel[index]);
     }
 
     public int[,] ReadCSV(string path)
@@ -162,21 +156,6 @@ public class MainMenuController : MonoBehaviour
             }
         }
         return priceList;
-    }
-
-    public DataPass PassData()
-    {
-        Progress progress = new Progress();
-        progress.Money = Money;
-        progress.Level = Level;
-        progress.UpgradeLevel = UpgradeLevel;
-        progress.GunLevel = GunLevel;
-        progress.LevelRank = LevelRank;
-        GameObject dataPass = new GameObject();
-        DataPass ProgressData = dataPass.AddComponent<DataPass>();
-        ProgressData.Progress = progress;
-        DontDestroyOnLoad(dataPass);
-        return ProgressData;
     }
 }
 

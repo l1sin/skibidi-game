@@ -20,6 +20,7 @@ public class CharacterHealth : MonoBehaviour, IDamageable
 
     public void SetHealth()
     {
+        HealthLevel = SaveManager.Instance.CurrentProgress.UpgradeLevel[0];
         HealthMax *= 1 + HealthLevel * HealthBonus;
         HealthCurrent = HealthMax;
     }

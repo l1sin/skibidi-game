@@ -1,10 +1,11 @@
 using TMPro;
 using UnityEngine;
-using static LevelController;
 
 public class Summary : MonoBehaviour
 {
     public LevelController LevelController;
+    public FPSCamera FPSCamera;
+    public WeaponController WeaponController;
     public TextMeshProUGUI[] ObjectiveTexts;
     public TextMeshProUGUI[] ObjectiveResultTexts;
     public TextMeshProUGUI RankText;
@@ -12,6 +13,7 @@ public class Summary : MonoBehaviour
 
     public Color[] RankColors;
     int Completed;
+    string Rank;
     int Money;
 
     public void Awake()
@@ -21,6 +23,13 @@ public class Summary : MonoBehaviour
 
     public void MakeResult()
     {
+        FPSCamera.ShowCursor();
+
+        foreach (Gun g in WeaponController.AllGuns)
+        {
+            g.enabled = false;
+        }
+
         for (int i = 0; i < 4; i++)
         {
             ObjectiveTexts[i].text = LevelController.ObjectivesTexts[i].text;
@@ -39,15 +48,18 @@ public class Summary : MonoBehaviour
         ObjectiveResultTexts[4].text = "Completed";
         ObjectiveResultTexts[4].color = Color.green;
 
-        RankText.text = GetRank();
+        Rank = GetRank();
+        RankText.text = Rank;
         Money = (Completed + 1) * LevelController.RewardPerObjective;
         MoneyAmountText.text = Money.ToString();
+
+        SaveGame();
     }
 
     public string GetRank()
     {
         Completed = 0;
-        foreach (Objective o in LevelController.Objectives)
+        foreach (LevelController.Objective o in LevelController.Objectives)
         {
             if (o.IsCompleted) Completed++;
         }
@@ -71,5 +83,43 @@ public class Summary : MonoBehaviour
             default:
                 return "";
         }
+    }
+
+    public void SaveGame()
+    {
+        Progress progress = SaveManager.Instance.CurrentProgress;
+        int lastRankValue = 0;
+        switch (progress.LevelRank[SaveManager.Instance.CurrentLevel - 1])
+        {
+            case "D":
+                lastRankValue = 1;
+                break;
+            case "C":
+                lastRankValue = 2;
+                break;
+            case "B":
+                lastRankValue = 3;
+                break;
+            case "A":
+                lastRankValue = 4;
+                break;
+            case "S":
+                lastRankValue = 5;
+                break;
+            default:
+                lastRankValue = 0;
+                break;
+        }
+
+        if (Completed >= lastRankValue)
+        progress.LevelRank[SaveManager.Instance.CurrentLevel - 1] = Rank;
+
+        progress.Money += Money;
+        if (SaveManager.Instance.CurrentLevel > progress.Level)
+        {
+            progress.Level = SaveManager.Instance.CurrentLevel;
+        }
+        SaveManager.Instance.CurrentProgress = progress;
+        SaveManager.Instance.SaveData(SaveManager.Instance.CurrentProgress);
     }
 }

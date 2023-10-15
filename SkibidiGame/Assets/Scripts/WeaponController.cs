@@ -14,6 +14,7 @@ public class WeaponController : MonoBehaviour
 
     public void Awake()
     {
+        SetGunProperties(SaveManager.Instance.CurrentProgress.UpgradeLevel, SaveManager.Instance.CurrentProgress.GunLevel);
         ChangeGun(0);
         ChangeIcon(0);
     }

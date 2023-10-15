@@ -1,8 +1,6 @@
-using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static Unity.VisualScripting.Icons;
 
 public class UpgradeBlock : MonoBehaviour
 {
@@ -44,18 +42,18 @@ public class UpgradeBlock : MonoBehaviour
     {
         if (_ItemType == ItemType.Upgrade)
         {
-            Price = MainMenuController.UpgradePrices[ItemIndex, MainMenuController.UpgradeLevel[ItemIndex]];
+            Price = MainMenuController.UpgradePrices[ItemIndex, MainMenuController.Progress.UpgradeLevel[ItemIndex]];
         }
         else if (_ItemType == ItemType.Gun)
         {
-            Price = MainMenuController.GunPrices[ItemIndex, MainMenuController.GunLevel[ItemIndex]];
+            Price = MainMenuController.GunPrices[ItemIndex, MainMenuController.Progress.GunLevel[ItemIndex]];
         }
         BuyOneButtonText.text = Price.ToString();
     }
 
     public void CheckMoney()
     {
-        if (Price > MainMenuController.Money)
+        if (Price > MainMenuController.Progress.Money)
         {
             BuyOneButton.interactable = false;
         }
@@ -67,7 +65,7 @@ public class UpgradeBlock : MonoBehaviour
 
     public bool CheckIfMaxLevel()
     {
-        if (_ItemType == ItemType.Upgrade && MainMenuController.UpgradeLevel[ItemIndex] >= 5)
+        if (_ItemType == ItemType.Upgrade && MainMenuController.Progress.UpgradeLevel[ItemIndex] >= 5)
         {
             BuyOneButton.interactable = false;
             BuyAllButton.interactable = false;
@@ -75,7 +73,7 @@ public class UpgradeBlock : MonoBehaviour
             BuyAllButtonText.text = "Sold";
             return true;
         }
-        else if (_ItemType == ItemType.Gun && MainMenuController.GunLevel[ItemIndex] >= 5)
+        else if (_ItemType == ItemType.Gun && MainMenuController.Progress.GunLevel[ItemIndex] >= 5)
         {
             BuyOneButton.interactable = false;
             BuyAllButton.interactable = false;
@@ -93,13 +91,14 @@ public class UpgradeBlock : MonoBehaviour
     {
         if (_ItemType == ItemType.Upgrade)
         {
-            UnlockLockers(++MainMenuController.UpgradeLevel[ItemIndex]);
+            UnlockLockers(++MainMenuController.Progress.UpgradeLevel[ItemIndex]);
         }
         else if (_ItemType == ItemType.Gun)
         {
-            UnlockLockers(++MainMenuController.GunLevel[ItemIndex]);
+            UnlockLockers(++MainMenuController.Progress.GunLevel[ItemIndex]);
         }
         MainMenuController.SpendMoney(Price);
+        MainMenuController.SaveData();
     }
 
     public void UpdatePrice()
@@ -115,14 +114,15 @@ public class UpgradeBlock : MonoBehaviour
     {
         if (_ItemType == ItemType.Upgrade)
         {
-            MainMenuController.UpgradeLevel[ItemIndex] = 5;
+            MainMenuController.Progress.UpgradeLevel[ItemIndex] = 5;
         }
         else if (_ItemType == ItemType.Gun)
         {
-            MainMenuController.GunLevel[ItemIndex] = 5;
+            MainMenuController.Progress.GunLevel[ItemIndex] = 5;
         }
         UnlockLockers(5);
         CheckIfMaxLevel();
+        MainMenuController.SaveData();
     }
 
 
