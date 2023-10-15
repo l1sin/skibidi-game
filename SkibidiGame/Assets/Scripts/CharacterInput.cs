@@ -11,9 +11,21 @@ public class CharacterInput : MonoBehaviour
 
     public static bool Jump;
 
+    public bool InputOn = true;
+
     private void Update()
     {
-        GetInput();
+        if (InputOn)
+        {
+            GetInput();
+        }
+        else
+        {
+            MouseInputX = 0;
+            MouseInputY = 0;
+            MoveInputX = 0;
+            MoveInputY = 0;
+        }
     }
 
     private void FixedUpdate()

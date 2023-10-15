@@ -1,11 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectible : MonoBehaviour
+public class BaseCollectible : MonoBehaviour
 {
     public LevelController LevelController;
     public float RotationSpeed;
+
+    public virtual void OnCollect()
+    {
+        Destroy(gameObject);
+    }
+
     public void Update()
     {
         transform.Rotate(new Vector3(0, RotationSpeed, 0));
@@ -15,8 +19,7 @@ public class Collectible : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
-            LevelController.OnPickUp();
-            Destroy(gameObject);
+            OnCollect();
         }
     }
 

@@ -10,7 +10,7 @@ public class LevelController : MonoBehaviour
     public Objective[] Objectives;
 
     public List<Enemy> Enemies;
-    public List<Collectible> Collectibles;
+    public List<BaseCollectible> Collectibles;
 
     public float FastTime;
     public bool NoDamage = true;
@@ -20,6 +20,15 @@ public class LevelController : MonoBehaviour
     public int CollectedCollectibles;
     public int TotalEnemies;
     public int KilledEnemies;
+
+    public bool LevelFinished;
+
+    public GameObject[] TurnOffOnLevelFinished;
+    public GameObject LevelFinishedMenu;
+
+    public CharacterInput CharacterInput;
+
+    public int RewardPerObjective = 100;
 
     public void Start()
     {
@@ -106,6 +115,18 @@ public class LevelController : MonoBehaviour
         {
             Objectives[3].CompleteObjective();
         }
+    }
+
+    public void FinishLevel()
+    {
+        Time.timeScale = 0;
+        CharacterInput.InputOn = false;
+        foreach (GameObject go in TurnOffOnLevelFinished)
+        {
+            go.SetActive(false);
+        }
+        LevelFinishedMenu.SetActive(true);
+        LevelFinished = true;
     }
 
 
