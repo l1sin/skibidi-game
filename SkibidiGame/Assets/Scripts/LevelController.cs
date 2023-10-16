@@ -25,10 +25,13 @@ public class LevelController : MonoBehaviour
 
     public GameObject[] TurnOffOnLevelFinished;
     public GameObject LevelFinishedMenu;
+    public GameObject DeadMenu;
 
     public CharacterInput CharacterInput;
 
     public int RewardPerObjective = 100;
+
+    public PauseManager PauseManager;
 
     public void Start()
     {
@@ -119,14 +122,23 @@ public class LevelController : MonoBehaviour
 
     public void FinishLevel()
     {
-        Time.timeScale = 0;
-        CharacterInput.InputOn = false;
+        PauseManager.Pause();
         foreach (GameObject go in TurnOffOnLevelFinished)
         {
             go.SetActive(false);
         }
         LevelFinishedMenu.SetActive(true);
         LevelFinished = true;
+    }
+
+    public void FailLevel()
+    {
+        PauseManager.Pause();
+        foreach (GameObject go in TurnOffOnLevelFinished)
+        {
+            go.SetActive(false);
+        }
+        DeadMenu.SetActive(true);
     }
 
 

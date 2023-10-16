@@ -14,6 +14,10 @@ public class LevelButton : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene(0);
-        Time.timeScale = 1;
+    }
+
+    public void LoadThisLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

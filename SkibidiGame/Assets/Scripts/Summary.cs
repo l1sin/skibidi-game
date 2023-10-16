@@ -23,13 +23,6 @@ public class Summary : MonoBehaviour
 
     public void MakeResult()
     {
-        FPSCamera.ShowCursor();
-
-        foreach (Gun g in WeaponController.AllGuns)
-        {
-            g.enabled = false;
-        }
-
         for (int i = 0; i < 4; i++)
         {
             ObjectiveTexts[i].text = LevelController.ObjectivesTexts[i].text;

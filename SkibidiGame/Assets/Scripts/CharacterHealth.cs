@@ -12,6 +12,8 @@ public class CharacterHealth : MonoBehaviour, IDamageable
     public LevelController LevelController;
     public bool NoDamage = true;
 
+    public bool IsDead = false;
+
     public void Start()
     {
         SetHealth();
@@ -46,6 +48,10 @@ public class CharacterHealth : MonoBehaviour, IDamageable
     }
     public void Die()
     {
-        Debug.Log("Dead");
+        if (!IsDead)
+        {
+            IsDead = true;
+            LevelController.FailLevel();
+        }
     }
 }

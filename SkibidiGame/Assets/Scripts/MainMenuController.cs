@@ -25,6 +25,8 @@ public class MainMenuController : MonoBehaviour
 
     public void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         if (CanLoadData)
         {
             LoadData();
