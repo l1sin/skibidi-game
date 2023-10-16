@@ -553,6 +553,7 @@ MonoBehaviour:
   BuyAllButtonText: {fileID: 4640016378955053654}
   ItemIndex: 0
   _ItemType: 0
+  Price: 0
 --- !u!1 &4076186285959564842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1332,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852936889137204249, guid: c305951361562ca49b57b47a82cf9627,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162905162518480191, guid: c305951361562ca49b57b47a82cf9627,
+        type: 3}
+      propertyPath: m_text
+      value: Donate
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162905162518480191, guid: c305951361562ca49b57b47a82cf9627,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 37.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178453469265052450, guid: c305951361562ca49b57b47a82cf9627,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178453469265052450, guid: c305951361562ca49b57b47a82cf9627,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178453469265052450, guid: c305951361562ca49b57b47a82cf9627,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.1551745
       objectReference: {fileID: 0}
     - target: {fileID: 8395216887304145149, guid: c305951361562ca49b57b47a82cf9627,
         type: 3}

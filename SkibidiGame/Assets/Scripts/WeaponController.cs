@@ -7,6 +7,7 @@ public class WeaponController : MonoBehaviour
     public GameObject[] Weapons;
     public Gun[] AllGuns;
     public Image[] GunIcons;
+    public GameObject[] LockIcons;
     public Color DefaultColor;
     public Color SelectedColor;
     public Gun CurrentGun;
@@ -93,6 +94,7 @@ public class WeaponController : MonoBehaviour
         for (int i = 0; i < AllGuns.Length; i++)
         {
             AllGuns[i].GunLevel = gunLevel[i];
+            if (AllGuns[i].GunLevel > 0) LockIcons[i].SetActive(false);
         }
     }
 }

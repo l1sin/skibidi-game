@@ -1,3 +1,4 @@
+using Sounds;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -32,6 +33,9 @@ public class LevelController : MonoBehaviour
     public int RewardPerObjective = 100;
 
     public PauseManager PauseManager;
+
+    public AudioClip WinSound;
+    public AudioClip FailSound;
 
     public void Start()
     {
@@ -134,6 +138,7 @@ public class LevelController : MonoBehaviour
     public void FailLevel()
     {
         PauseManager.Pause();
+        SoundManager.Instance.PlaySound(FailSound);
         foreach (GameObject go in TurnOffOnLevelFinished)
         {
             go.SetActive(false);

@@ -1,3 +1,4 @@
+using Sounds;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,7 +10,6 @@ public class Enemy : MonoBehaviour, IDamageable
     public CharacterHealth CharacterHealth;
     public LevelController LevelController;
     public Transform Body;
-    public Transform Head;
 
     public float HealthMax;
     public float HealthCurrent;
@@ -30,6 +30,9 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public bool IsAlive = true;
 
+    public GameObject AudioSource;
+    public AudioClip DeathSound;
+
     public void Start()
     {
         Buff();
@@ -41,9 +44,8 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void Update()
     {
-        if (detected)
+        if (detected && IsAlive)
         {
-            LookAtPlayer();
             NavMeshFollow();
             Attack();
         }
@@ -52,7 +54,7 @@ public class Enemy : MonoBehaviour, IDamageable
     public IEnumerator LookForPlayer()
     {
         yield return new WaitForSeconds(1);
-        if (Physics.Raycast(LookPoint.position, Destination.position - LookPoint.position, out RaycastHit hitInfo,  100, ViewMask))
+        if (Physics.Raycast(LookPoint.position, Destination.position - LookPoint.position, out RaycastHit hitInfo, 100, ViewMask))
         {
             if (hitInfo.transform.gameObject.layer == 7)
             {
@@ -74,11 +76,6 @@ public class Enemy : MonoBehaviour, IDamageable
         Agent.destination = Destination.position;
     }
 
-    public void LookAtPlayer()
-    {
-        Head.LookAt(LookTarget);
-    }
-
     public void GetDamage(float damage)
     {
         if (IsAlive)
@@ -94,6 +91,13 @@ public class Enemy : MonoBehaviour, IDamageable
     public void Die()
     {
         LevelController.OnEnemyKilled();
+        Animator.SetTrigger("Death");
+        Destroy(Agent);
+        SoundManager.Instance.PlaySound(DeathSound);
+    }
+
+    public void OnDeathAnimationEnd()
+    {
         Destroy(gameObject);
     }
 
@@ -103,10 +107,12 @@ public class Enemy : MonoBehaviour, IDamageable
         {
             CharacterHealth.GetDamage(Damage * Time.deltaTime);
             Animator.SetBool("IsAttacking", true);
+            AudioSource.SetActive(true);
         }
         else
         {
             Animator.SetBool("IsAttacking", false);
+            AudioSource.SetActive(false);
         }
     }
 
