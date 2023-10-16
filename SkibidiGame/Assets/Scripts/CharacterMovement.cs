@@ -1,3 +1,4 @@
+using Sounds;
 using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
@@ -14,6 +15,11 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField] private LayerMask _whatIsGround;
     public bool IsGrounded;
 
+    public AudioClip[] StepSounds;
+    public AudioClip[] JumpSounds;
+    public AudioClip[] LandSounds;
+    public Animator Animator;
+
     public void Start()
     {
         SetSpeedLevel(SaveManager.Instance.CurrentProgress.UpgradeLevel[1]);
@@ -24,6 +30,11 @@ public class CharacterMovement : MonoBehaviour
         Move();
     }
 
+    public void MakeStepSound()
+    {
+        SoundManager.Instance.PlaySoundRandom(StepSounds);
+    }
+
     public void SetSpeedLevel(int SpeedLevel)
     {
         Speed *= 1 + SpeedLevel * SpeedBonus;
@@ -31,7 +42,17 @@ public class CharacterMovement : MonoBehaviour
 
     private void Move()
     {
-        IsGrounded = Physics.CheckSphere(_groundCheck.position, _groundCheckRadius, _whatIsGround);
+        if (!IsGrounded)
+        {
+            IsGrounded = Physics.CheckSphere(_groundCheck.position, _groundCheckRadius, _whatIsGround);
+            if (IsGrounded) SoundManager.Instance.PlaySoundRandom(LandSounds);
+        }
+        else
+        {
+            IsGrounded = Physics.CheckSphere(_groundCheck.position, _groundCheckRadius, _whatIsGround);
+            if (!IsGrounded) SoundManager.Instance.PlaySoundRandom(JumpSounds);
+        }
+        
 
         if (IsGrounded && _velocity.y < 0)
         {
@@ -40,6 +61,14 @@ public class CharacterMovement : MonoBehaviour
 
         float x = CharacterInput.MoveInputX;
         float z = CharacterInput.MoveInputY;
+        if ((x != 0 || z != 0) && IsGrounded)
+        {
+            Animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            Animator.SetBool("IsRunning", false);
+        }
         _movement = transform.right * x + transform.forward * z;
         _characterController.Move(_movement * Speed * Time.unscaledDeltaTime);
         

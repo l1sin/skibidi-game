@@ -28,7 +28,7 @@ namespace Sounds
             audio.Play();
         }
 
-        public void PlaySoundRandow(AudioClip[] clips)
+        public void PlaySoundRandom(AudioClip[] clips)
         {
             var newSound = Instantiate(_soundPrefab);
             var audio = newSound.GetComponent<AudioSource>();
