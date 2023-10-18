@@ -381,7 +381,7 @@ MonoBehaviour:
   GunLevel: 1
   AnimationSpeedModifyer: 1
   AmmoBonus: 0.2
-  DamageBonus: 0.35
+  DamageBonus: 0.7
   AnimationSpeedBonus: 0.125
   LaserBeam: {fileID: 3517683224650635633}
   Line: {fileID: 8573507891756592667}

@@ -84,7 +84,7 @@ MonoBehaviour:
   GunLevel: 1
   AnimationSpeedModifyer: 1
   AmmoBonus: 0.2
-  DamageBonus: 0.125
+  DamageBonus: 0.25
   AnimationSpeedBonus: 0.125
   ShotVFX: {fileID: 9089888455154840331}
   shotSound: {fileID: 8300000, guid: e0dae7ef0e25b4348a4fce539e583e89, type: 3}

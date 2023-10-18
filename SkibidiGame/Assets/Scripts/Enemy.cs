@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour, IDamageable
 {
     public Transform LookPoint;
-    public Transform LookTarget;
     public CharacterHealth CharacterHealth;
     public LevelController LevelController;
     public Transform Body;
@@ -33,6 +32,8 @@ public class Enemy : MonoBehaviour, IDamageable
     public GameObject AudioSource;
     public AudioClip DeathSound;
 
+    public float ViewDistance;
+
     public void Start()
     {
         Buff();
@@ -54,7 +55,7 @@ public class Enemy : MonoBehaviour, IDamageable
     public IEnumerator LookForPlayer()
     {
         yield return new WaitForSeconds(1);
-        if (Physics.Raycast(LookPoint.position, Destination.position - LookPoint.position, out RaycastHit hitInfo, 100, ViewMask))
+        if (Physics.Raycast(LookPoint.position, Destination.position - LookPoint.position, out RaycastHit hitInfo, ViewDistance, ViewMask))
         {
             if (hitInfo.transform.gameObject.layer == 7)
             {
