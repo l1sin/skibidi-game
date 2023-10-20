@@ -77,7 +77,7 @@ public class Enemy : EnemyBase, IDamageable
         Agent.destination = Destination.position;
     }
 
-    public void GetDamage(float damage)
+    public virtual void GetDamage(float damage)
     {
         if (IsAlive)
         {
@@ -97,7 +97,7 @@ public class Enemy : EnemyBase, IDamageable
         SoundManager.Instance.PlaySound(DeathSound);
     }
 
-    public void OnDeathAnimationEnd()
+    public virtual void OnDeathAnimationEnd()
     {
         Destroy(gameObject);
     }
