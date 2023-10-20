@@ -10,7 +10,7 @@ public class LevelController : MonoBehaviour
     public TextMeshProUGUI[] ObjectivesTexts;
     public Objective[] Objectives;
 
-    public List<Enemy> Enemies;
+    public List<EnemyBase> Enemies;
     public List<BaseCollectible> Collectibles;
 
     public float FastTime;

@@ -49,10 +49,10 @@ public class Lasergun : GunHold
             Line.SetPosition(1, Line.transform.InverseTransformPoint(HitInfo.point));
             ImpactVFX.transform.position = HitInfo.point;
 
-            Enemy enemy = objectHit.GetComponentInParent<Enemy>();
-            if (enemy != null)
+            IDamageable damageable = objectHit.GetComponentInParent<IDamageable>();
+            if (damageable != null)
             {
-                enemy.GetDamage(Damage * Time.deltaTime);
+                damageable.GetDamage(Damage * Time.deltaTime);
             }
         }
     }

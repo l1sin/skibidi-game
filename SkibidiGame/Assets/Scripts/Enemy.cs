@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour, IDamageable
+public class Enemy : EnemyBase, IDamageable
 {
     public Transform LookPoint;
     public CharacterHealth CharacterHealth;

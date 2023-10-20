@@ -45,10 +45,10 @@ public class Minigun : GunHold
             particles.transform.SetParent(objectHit);
             Destroy(particles, 5);
 
-            Enemy enemy = objectHit.GetComponentInParent<Enemy>();
-            if (enemy != null)
+            IDamageable damageable = objectHit.GetComponentInParent<IDamageable>();
+            if (damageable != null)
             {
-                enemy.GetDamage(Damage);
+                damageable.GetDamage(Damage);
             }
         }
     }

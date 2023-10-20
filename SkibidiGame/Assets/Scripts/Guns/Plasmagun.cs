@@ -34,17 +34,17 @@ public class Plasmagun : GunTap
                 Destroy(particles, 5);
 
                 Collider[] targets = Physics.OverlapSphere(HitInfo.point, Radius, Targets);
-                HashSet <Enemy> enemies = new HashSet<Enemy>();
+                HashSet <IDamageable> damageables = new HashSet<IDamageable>();
 
                 foreach (Collider target in targets)
                 {
-                    enemies.Add(target.GetComponentInParent<Enemy>());
+                    damageables.Add(target.GetComponentInParent<IDamageable>());
                 }
-                foreach (Enemy enemy in enemies)
+                foreach (IDamageable damageable in damageables)
                 {
-                    if (enemy != null)
+                    if (damageable != null)
                     {
-                        enemy.GetDamage(Damage);
+                        damageable.GetDamage(Damage);
                     }
                 }
             }
