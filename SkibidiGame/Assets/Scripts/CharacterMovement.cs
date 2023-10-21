@@ -69,7 +69,7 @@ public class CharacterMovement : MonoBehaviour
         {
             Animator.SetBool("IsRunning", false);
         }
-        _movement = transform.right * x + transform.forward * z;
+        _movement = (transform.right * x + transform.forward * z).normalized;
         _characterController.Move(_movement * Speed * Time.unscaledDeltaTime);
         
 
