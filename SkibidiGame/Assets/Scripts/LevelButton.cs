@@ -8,7 +8,14 @@ public class LevelButton : MonoBehaviour
     public void LoadLevel(int index)
     {
         SaveManager.Instance.CurrentLevelDifficulty = LevelDifficulty;
-        SaveManager.Instance.CurrentLevel = index + (10 * LevelDifficulty);
+        if (LevelDifficulty < 3)
+        {
+            SaveManager.Instance.CurrentLevel = index + (10 * LevelDifficulty);
+        }
+        else
+        {
+            SaveManager.Instance.CurrentLevel = 31;
+        }
         SceneManager.LoadScene(index);
     }
     public void LoadMenu()
