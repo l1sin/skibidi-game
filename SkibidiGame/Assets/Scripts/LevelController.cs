@@ -36,6 +36,7 @@ public class LevelController : MonoBehaviour
 
     public AudioClip WinSound;
     public AudioClip FailSound;
+    public GameObject ObjecivesObject;
 
     public void Start()
     {
@@ -51,6 +52,16 @@ public class LevelController : MonoBehaviour
         TimeInSeconds += Time.deltaTime;
         if (TimeInSeconds > FastTime && InTime) FailInTime(); 
         Timer.text = GetTimerText(TimeInSeconds);
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ToggleObjectives();
+        }
+    }
+
+    public void ToggleObjectives()
+    {
+        if (ObjecivesObject.activeSelf) ObjecivesObject.SetActive(false);
+        else ObjecivesObject.SetActive(true);
     }
 
     public string GetTimerText(float time)

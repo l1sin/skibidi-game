@@ -609,6 +609,7 @@ MonoBehaviour:
   PauseManager: {fileID: 8363968235848657883}
   WinSound: {fileID: 0}
   FailSound: {fileID: 8300000, guid: 45df41a9c3646f74e87a6df63f8e9feb, type: 3}
+  ObjecivesObject: {fileID: 4228810750193426237}
 --- !u!1 &770721413863728795
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,7 +2199,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.45
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -2232,7 +2233,7 @@ MonoBehaviour:
   _jumpHeight: 1
   _characterController: {fileID: 2071793864078010150}
   _groundCheck: {fileID: 7311615429744909129}
-  _groundCheckRadius: 0.3
+  _groundCheckRadius: 0.45
   _whatIsGround:
     serializedVersion: 2
     m_Bits: 64

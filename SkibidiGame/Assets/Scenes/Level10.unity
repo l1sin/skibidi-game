@@ -2103,7 +2103,7 @@ Transform:
   - {fileID: 807456069}
   - {fileID: 259776708}
   - {fileID: 1384267092}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1261565243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &941213458
 GameObject:
@@ -3976,12 +3976,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907603242}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2142440010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1913455500
 PrefabInstance:
@@ -4202,6 +4202,16 @@ PrefabInstance:
       propertyPath: Collectibles.Array.data[3]
       value: 
       objectReference: {fileID: 1226746713}
+    - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
+        type: 3}
+      propertyPath: TurnOffOnLevelFinished.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
+        type: 3}
+      propertyPath: TurnOffOnLevelFinished.Array.data[6]
+      value: 
+      objectReference: {fileID: 1875847784}
     - target: {fileID: 4405515339863798920, guid: 633f84898ff7ade44a0d67c10c50d6d1,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -4384,6 +4394,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 607510500}
+    - targetCorrespondingSourceObject: {fileID: 4269292813548769754, guid: 25c22d4a9e2d5404ba7e9fba53e6a5ae,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 927181486}
     - targetCorrespondingSourceObject: {fileID: 6357147696576530425, guid: 25c22d4a9e2d5404ba7e9fba53e6a5ae,
         type: 3}
       insertIndex: -1
@@ -4408,6 +4422,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 475881162}
+    - targetCorrespondingSourceObject: {fileID: 7275243619902563949, guid: 25c22d4a9e2d5404ba7e9fba53e6a5ae,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1907603248}
     - targetCorrespondingSourceObject: {fileID: 5016625081740319607, guid: 25c22d4a9e2d5404ba7e9fba53e6a5ae,
         type: 3}
       insertIndex: -1
@@ -5633,6 +5651,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 2032341375}
   - {fileID: 1951924602}
-  - {fileID: 927181486}
   - {fileID: 1871355972}
-  - {fileID: 1907603248}
