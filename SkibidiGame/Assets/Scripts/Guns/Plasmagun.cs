@@ -29,8 +29,6 @@ public class Plasmagun : GunTap
                 Destroy(beamObj, 5);
 
                 GameObject particles = Instantiate(ImpactVFX, HitInfo.point, Quaternion.LookRotation(HitInfo.normal));
-                VisualEffect visualEffect = particles.GetComponent<VisualEffect>();
-                visualEffect.SetFloat("Size", Radius);
                 Destroy(particles, 5);
 
                 Collider[] targets = Physics.OverlapSphere(HitInfo.point, Radius, Targets);

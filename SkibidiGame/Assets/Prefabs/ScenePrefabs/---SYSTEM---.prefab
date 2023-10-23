@@ -7997,6 +7997,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3. ShotgunObject
       objectReference: {fileID: 0}
+    - target: {fileID: 194350546001932286, guid: 53c57ca4b0014324da5be46f95eeab0f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2014800381984844151, guid: 53c57ca4b0014324da5be46f95eeab0f,
         type: 3}
       propertyPath: Camera
@@ -8103,6 +8108,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 6. PlasmagunObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321576990802985553, guid: cd9d38c19d644f14e93aa522b8ef386e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5822185499267960430, guid: cd9d38c19d644f14e93aa522b8ef386e,
         type: 3}
@@ -8260,6 +8270,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 4. MinigunObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278826170122171153, guid: 3f84aa02e04b5f04ab3427df9838b094,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6409883935196877037, guid: 3f84aa02e04b5f04ab3427df9838b094,
         type: 3}
@@ -8620,6 +8635,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2. RifleObject
       objectReference: {fileID: 0}
+    - target: {fileID: 1959675360189627971, guid: e5799aeaed16d284f8fcbd26ff01312c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4623953815652712580, guid: e5799aeaed16d284f8fcbd26ff01312c,
         type: 3}
       propertyPath: Camera
@@ -8883,6 +8903,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 5. LasergunObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309283202997071002, guid: 4cd62fbdf0235a240b8925dec6faa51a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8492191003144209700, guid: 4cd62fbdf0235a240b8925dec6faa51a,
         type: 3}

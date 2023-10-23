@@ -23,27 +23,43 @@ public class SaveManager : MonoBehaviour
     public Progress LoadData()
     {
         Progress progress;
-        if (File.Exists($"{Application.dataPath}/{path}"))
+        if (PlayerPrefs.HasKey("save"))
         {
-            string json = File.ReadAllText($"{Application.dataPath}/{path}");
+            string json = PlayerPrefs.GetString("save");
             progress = JsonUtility.FromJson<Progress>(json);
             CurrentProgress = progress;
-            Debug.Log("File exists. Loading");
+            Debug.Log($"Loaded from PlayerPrefs:\n{json}");
         }
         else
         {
             progress = new Progress();
-            Debug.Log("File do not exists. Creating save file");
             SaveData(progress);
+            Debug.Log("File do not exists. Creating save file");
         }
+
+        
+        //if (File.Exists($"{Application.dataPath}/{path}"))
+        //{
+        //    string json = File.ReadAllText($"{Application.dataPath}/{path}");
+        //    progress = JsonUtility.FromJson<Progress>(json);
+        //    CurrentProgress = progress;
+        //    Debug.Log("File exists. Loading");
+        //}
+        //else
+        //{
+        //    progress = new Progress();
+        //    Debug.Log("File do not exists. Creating save file");
+        //    SaveData(progress);
+        //}
         return progress;
     }
 
     public void SaveData(Progress progress)
     {
-        string json = JsonUtility.ToJson(progress);
-        File.WriteAllText($"{Application.dataPath}/{path}", json);
-        Debug.Log($"Saved at {Application.dataPath}/{path}");
         CurrentProgress = progress;
+        string json = JsonUtility.ToJson(progress);
+        PlayerPrefs.SetString("save", json);
+        PlayerPrefs.Save();
+        Debug.Log($"Local save to PlayerPrefs");
     }
 }

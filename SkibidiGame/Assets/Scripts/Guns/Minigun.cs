@@ -1,10 +1,9 @@
 using Sounds;
 using UnityEngine;
-using UnityEngine.VFX;
 
 public class Minigun : GunHold
 {
-    public VisualEffect ShotVFX;
+    public ParticleSystem ShotVFX;
     public AudioClip shotSound;
     public GameObject ImpactVFX;
 

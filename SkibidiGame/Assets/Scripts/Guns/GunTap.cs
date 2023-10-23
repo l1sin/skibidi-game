@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.VFX;
 
 public class GunTap : Gun
 {
-    public VisualEffect ShotVFX;
+    public ParticleSystem ShotVFX;
     public AudioClip shotSound;
     public GameObject ImpactVFX;
 
