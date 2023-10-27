@@ -35,6 +35,8 @@ public class UpgradeBlock : MonoBehaviour
 
     public void Awake()
     {
+        BuyOneButtonText.font = SaveManager.Instance.CurrentFont;
+        BuyAllButtonText.font = SaveManager.Instance.CurrentFont;
         UpdatePrice();
     }
 
@@ -69,16 +71,17 @@ public class UpgradeBlock : MonoBehaviour
         {
             BuyOneButton.interactable = false;
             BuyAllButton.interactable = false;
-            BuyOneButtonText.text = "Sold";
-            BuyAllButtonText.text = "Sold";
+            BuyOneButtonText.text = SaveManager.Instance.Localization[17];
+            BuyAllButtonText.text = SaveManager.Instance.Localization[17];
             return true;
         }
         else if (_ItemType == ItemType.Gun && MainMenuController.Progress.GunLevel[ItemIndex] >= 5)
         {
             BuyOneButton.interactable = false;
             BuyAllButton.interactable = false;
-            BuyOneButtonText.text = "Sold";
-            BuyAllButtonText.text = "Sold";
+            BuyOneButtonText.text = SaveManager.Instance.Localization[17];
+            BuyAllButtonText.text = SaveManager.Instance.Localization[17];
+            
             return true;
         }
         else

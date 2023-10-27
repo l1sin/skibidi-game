@@ -90,16 +90,20 @@ public class LevelController : MonoBehaviour
             Objectives[i].Text = ObjectivesTexts[i];
         }
 
-        Objectives[0].Text.text = $"Complete level in less than {GetTimerText(FastTime)}";
+        Objectives[0].Text.font = SaveManager.Instance.CurrentFont;
+        Objectives[0].Text.text = $"{SaveManager.Instance.Localization[19]} {GetTimerText(FastTime)}";
         Objectives[0].CompleteObjective();
 
-        Objectives[1].Text.text = $"Complete level with no damage";
+        Objectives[1].Text.font = SaveManager.Instance.CurrentFont;
+        Objectives[1].Text.text = $"{SaveManager.Instance.Localization[20]}";
         Objectives[1].CompleteObjective();
 
-        Objectives[2].Text.text = $"Pick up all collectibles {CollectedCollectibles}/{TotalCollectibles}";
+        Objectives[2].Text.font = SaveManager.Instance.CurrentFont;
+        Objectives[2].Text.text = $"{SaveManager.Instance.Localization[21]} {CollectedCollectibles}/{TotalCollectibles}";
         Objectives[2].FailObjective();
 
-        Objectives[3].Text.text = $"Kill all Skibidi {KilledEnemies}/{TotalEnemies}";
+        Objectives[3].Text.font = SaveManager.Instance.CurrentFont;
+        Objectives[3].Text.text = $"{SaveManager.Instance.Localization[22]} {KilledEnemies}/{TotalEnemies}";
         Objectives[3].FailObjective();
     }
 
@@ -118,7 +122,7 @@ public class LevelController : MonoBehaviour
     public void OnPickUp()
     {
         CollectedCollectibles++;
-        Objectives[2].Text.text = $"Pick up all collectibles {CollectedCollectibles}/{TotalCollectibles}";
+        Objectives[2].Text.text = $"{SaveManager.Instance.Localization[21]} {CollectedCollectibles}/{TotalCollectibles}";
         if (CollectedCollectibles >= TotalCollectibles)
         {
             Objectives[2].CompleteObjective();
@@ -128,7 +132,7 @@ public class LevelController : MonoBehaviour
     public void OnEnemyKilled()
     {
         KilledEnemies++;
-        Objectives[3].Text.text = $"Kill all Skibidi {KilledEnemies}/{TotalEnemies}";
+        Objectives[3].Text.text = $"{SaveManager.Instance.Localization[22]} {KilledEnemies}/{TotalEnemies}";
         if (KilledEnemies >= TotalEnemies)
         {
             Objectives[3].CompleteObjective();

@@ -11,6 +11,8 @@ public class MainMenuController : MonoBehaviour
     public TextMeshProUGUI[] Ranks;
     public Color[] RankColors;
 
+    public GameObject Hint;
+
     public UpgradeBlock[] UpgradeBlocks;
     public UpgradeBlock[] GunBlocks;
 
@@ -23,6 +25,8 @@ public class MainMenuController : MonoBehaviour
     public int[,] UpgradePrices;
     public int[,] GunPrices;
 
+    public string language;
+
     public void Start()
     {
         Cursor.visible = true;
@@ -31,14 +35,15 @@ public class MainMenuController : MonoBehaviour
         {
             LoadData();
         }
+        SaveManager.Instance.LoadLanguage(language);
         UnlockLevels();
         SetRanks();
         UnlockLastLevel();
         SetMoney();
         UnlockUpgrades();
         UnlockGuns();
-        UpgradePrices = ReadCSV("UpgradePrices");
-        GunPrices = ReadCSV("GunPrices");
+        UpgradePrices = Utility.Utility.ReadCSVInt("Prices/UpgradePrices");
+        GunPrices = Utility.Utility.ReadCSVInt("Prices/GunPrices");
         UpdateBlocks();
     }
 
@@ -91,6 +96,7 @@ public class MainMenuController : MonoBehaviour
             if (Progress.LevelRank[i] != "S") return;
         }
         LastLevelButton.interactable = true;
+        Hint.SetActive(false);
     }
 
     public void SetMoney()
@@ -140,24 +146,6 @@ public class MainMenuController : MonoBehaviour
     public void UnlockGuns(int index)
     {
         GunBlocks[index].UnlockLockers(Progress.GunLevel[index]);
-    }
-
-    public int[,] ReadCSV(string path)
-    {
-        int[,] priceList;
-        TextAsset ta = Resources.Load<TextAsset>($"Prices/{path}");
-        string[] lines = ta.text.Split('\n', System.StringSplitOptions.None);
-        priceList = new int[lines.Length - 1, lines[0].Split(';', System.StringSplitOptions.None).Length - 1];
-        for (int i = 1; i < lines.Length; i++)
-        {
-            string[] values = lines[i].Split(';', System.StringSplitOptions.None);
-
-            for (int j = 1; j < values.Length; j++)
-            {
-                priceList[i - 1 , j - 1] = int.Parse(values[j]);
-            }
-        }
-        return priceList;
     }
 }
 

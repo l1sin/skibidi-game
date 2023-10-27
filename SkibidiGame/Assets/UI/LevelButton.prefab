@@ -372,7 +372,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7118026824494357604}
+      objectReference: {fileID: 4769089498034411353}
     - target: {fileID: 9209345951582204891, guid: 42f63d9868b577743b209a1907ebd613,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -386,7 +386,7 @@ PrefabInstance:
     - target: {fileID: 9209345951582204891, guid: 42f63d9868b577743b209a1907ebd613,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ButtonMethods, Assembly-CSharp
+      value: LevelButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9209345951582204891, guid: 42f63d9868b577743b209a1907ebd613,
         type: 3}
@@ -404,7 +404,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 37005680503128677, guid: 42f63d9868b577743b209a1907ebd613,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7118026824494357604}
+      addedObject: {fileID: 4769089498034411353}
   m_SourcePrefab: {fileID: 100100000, guid: 42f63d9868b577743b209a1907ebd613, type: 3}
 --- !u!1 &3092280982395466491 stripped
 GameObject:
@@ -412,7 +412,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3056401888995913886}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7118026824494357604
+--- !u!114 &4769089498034411353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -424,7 +424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8551d9d71b2f58946adcca9a487123e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelDifficulty: 1
+  LevelDifficulty: 0
+  MainMenuController: {fileID: 0}
 --- !u!224 &5903827483394815747 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8900272315581892509, guid: 42f63d9868b577743b209a1907ebd613,

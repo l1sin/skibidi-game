@@ -1,4 +1,5 @@
-using System.IO;
+using System;
+using TMPro;
 using UnityEngine;
 
 public class SaveManager : MonoBehaviour
@@ -8,6 +9,10 @@ public class SaveManager : MonoBehaviour
     public int CurrentLevel;
     public int CurrentLevelDifficulty;
     public string path = "save.json";
+    public string[,] Dictionary;
+    public string[] Localization;
+    public TMP_FontAsset[] Fonts;
+    public TMP_FontAsset CurrentFont;
     private void OnEnable()
     {
         if (Instance != null && Instance != this)
@@ -36,21 +41,6 @@ public class SaveManager : MonoBehaviour
             SaveData(progress);
             Debug.Log("File do not exists. Creating save file");
         }
-
-        
-        //if (File.Exists($"{Application.dataPath}/{path}"))
-        //{
-        //    string json = File.ReadAllText($"{Application.dataPath}/{path}");
-        //    progress = JsonUtility.FromJson<Progress>(json);
-        //    CurrentProgress = progress;
-        //    Debug.Log("File exists. Loading");
-        //}
-        //else
-        //{
-        //    progress = new Progress();
-        //    Debug.Log("File do not exists. Creating save file");
-        //    SaveData(progress);
-        //}
         return progress;
     }
 
@@ -61,5 +51,32 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetString("save", json);
         PlayerPrefs.Save();
         Debug.Log($"Local save to PlayerPrefs");
+    }
+
+    public void LoadLanguage(string language)
+    {
+        Dictionary = Utility.Utility.ReadCSVString("Localization");
+
+        int id = GetLanguageId(language);
+        CurrentFont = Fonts[id - 1];
+        Localization = new string[Dictionary.GetLength(0) - 1];
+
+        for (int i = 1; i < Dictionary.GetLength(0); i++)
+        {
+            Localization[i - 1] = Dictionary[i, id];
+        }
+    }
+
+    public int GetLanguageId(string language)
+    {
+        for (int j = 0; j < Dictionary.GetLength(1); j++)
+        {
+            if (Dictionary[0, j] == language)
+            {
+                return j;
+            }
+        }
+        Debug.Log("Unknown language - switch to en");
+        return GetLanguageId("en");
     }
 }

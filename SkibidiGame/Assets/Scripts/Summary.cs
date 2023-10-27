@@ -18,7 +18,22 @@ public class Summary : MonoBehaviour
 
     public void Awake()
     {
+        ApplyFonts();
         MakeResult();
+    }
+
+    public void ApplyFonts()
+    {
+        foreach (TextMeshProUGUI tmp in ObjectiveTexts)
+        {
+            tmp.font = SaveManager.Instance.CurrentFont;
+        }
+        foreach (TextMeshProUGUI tmp in ObjectiveResultTexts)
+        {
+            tmp.font = SaveManager.Instance.CurrentFont;
+        }
+        RankText.font = SaveManager.Instance.CurrentFont;
+        MoneyAmountText.font = SaveManager.Instance.CurrentFont;
     }
 
     public void MakeResult()
@@ -28,17 +43,17 @@ public class Summary : MonoBehaviour
             ObjectiveTexts[i].text = LevelController.ObjectivesTexts[i].text;
             if (LevelController.Objectives[i].IsCompleted)
             {
-                ObjectiveResultTexts[i].text = "Completed";
+                ObjectiveResultTexts[i].text = SaveManager.Instance.Localization[30];
                 ObjectiveResultTexts[i].color = Color.green;
             }
             else
             {
-                ObjectiveResultTexts[i].text = "Failed";
+                ObjectiveResultTexts[i].text = SaveManager.Instance.Localization[31];
                 ObjectiveResultTexts[i].color = Color.red;
             }
         }
-        ObjectiveTexts[4].text = "Complete level";
-        ObjectiveResultTexts[4].text = "Completed";
+        ObjectiveTexts[4].text = SaveManager.Instance.Localization[33];
+        ObjectiveResultTexts[4].text = SaveManager.Instance.Localization[30];
         ObjectiveResultTexts[4].color = Color.green;
 
         Rank = GetRank();
