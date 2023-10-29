@@ -20,7 +20,7 @@ public class LevelButton : MonoBehaviour
     }
     public void LoadMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(12);
     }
 
     public void LoadThisLevel()

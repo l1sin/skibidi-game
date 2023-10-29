@@ -10241,47 +10241,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4778064468463010075, guid: 9e1ff062282de284885ec64f31bd8870,
-        type: 3}
-      propertyPath: Fonts.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778064468463010075, guid: 9e1ff062282de284885ec64f31bd8870,
-        type: 3}
-      propertyPath: Fonts.Array.data[6]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
-        type: 2}
-    - target: {fileID: 4778064468463010075, guid: 9e1ff062282de284885ec64f31bd8870,
-        type: 3}
-      propertyPath: Fonts.Array.data[7]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
-        type: 2}
-    - target: {fileID: 4778064468463010075, guid: 9e1ff062282de284885ec64f31bd8870,
-        type: 3}
-      propertyPath: Fonts.Array.data[8]
-      value: 
-      objectReference: {fileID: 11400000, guid: 33d730599c7e3b243aefde20ca84b3fe,
-        type: 2}
-    - target: {fileID: 4778064468463010075, guid: 9e1ff062282de284885ec64f31bd8870,
-        type: 3}
-      propertyPath: Fonts.Array.data[9]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
-        type: 2}
-    - target: {fileID: 4778064468463010075, guid: 9e1ff062282de284885ec64f31bd8870,
-        type: 3}
-      propertyPath: Fonts.Array.data[10]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
-        type: 2}
-    - target: {fileID: 4778064468463010075, guid: 9e1ff062282de284885ec64f31bd8870,
-        type: 3}
-      propertyPath: Fonts.Array.data[11]
-      value: 
-      objectReference: {fileID: 11400000, guid: e01e478c8fb5ac94b871c10e1d727948,
-        type: 2}
     - target: {fileID: 6204820679238776579, guid: 9e1ff062282de284885ec64f31bd8870,
         type: 3}
       propertyPath: m_LocalPosition.x

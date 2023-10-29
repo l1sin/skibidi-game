@@ -25,8 +25,6 @@ public class MainMenuController : MonoBehaviour
     public int[,] UpgradePrices;
     public int[,] GunPrices;
 
-    public string language;
-
     public void Start()
     {
         Cursor.visible = true;
@@ -34,8 +32,8 @@ public class MainMenuController : MonoBehaviour
         if (CanLoadData)
         {
             LoadData();
+            Debug.Log($"DataLoaded Money: {Progress.Money}");
         }
-        SaveManager.Instance.LoadLanguage(language);
         UnlockLevels();
         SetRanks();
         UnlockLastLevel();
@@ -49,7 +47,7 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadData()
     {
-        Progress = SaveManager.Instance.LoadData();
+        Progress = SaveManager.Instance.CurrentProgress;
     }
     public void SaveData()
     {
