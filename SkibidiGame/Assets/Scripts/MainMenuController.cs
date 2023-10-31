@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
@@ -60,6 +61,35 @@ public class MainMenuController : MonoBehaviour
         GetYanPrices();
 #endif
         UpdateBlocks();
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.KeypadMinus))
+        {
+            Progress = new Progress();
+            SaveManager.Instance.SaveData(Progress);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (Input.GetKeyDown(KeyCode.KeypadPlus))
+        {
+            Progress = new Progress();
+            Progress.Level = 31;
+            for (int i = 0; i < Progress.UpgradeLevel.Length; i++)
+            {
+                Progress.UpgradeLevel[i] = 5;
+            }
+            for (int i = 0; i < Progress.GunLevel.Length; i++)
+            {
+                Progress.GunLevel[i] = 5;
+            }
+            for (int i = 0; i< Progress.LevelRank.Length; i++)
+            {
+                Progress.LevelRank[i] = "S";
+            }
+            SaveManager.Instance.SaveData(Progress);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void GetYanPrices()
