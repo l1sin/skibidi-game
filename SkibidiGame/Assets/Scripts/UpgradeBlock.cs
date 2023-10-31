@@ -27,7 +27,7 @@ public class UpgradeBlock : MonoBehaviour
     public void OnEnable()
     {
         BuyOneButton.onClick.AddListener(BuyOneOnClick);
-        BuyAllButton.onClick.AddListener(BuyAllOnClick);
+        BuyAllButton.onClick.AddListener(CallPurchaseMenu);
     }
 
     public void OnDisable()
@@ -95,7 +95,13 @@ public class UpgradeBlock : MonoBehaviour
 
     public void CallPurchaseMenu()
     {
-
+#if UNITY_EDITOR
+        Debug.Log("CallPurchaseMenu");
+        Debug.Log(gameObject.name);
+        BuyAllOnClick();
+#elif UNITY_WEBGL
+        Yandex.CallPurchaseMenu(PurchaseID, gameObject.name);
+#endif
     }
 
     public void BuyOneOnClick()

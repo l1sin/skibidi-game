@@ -29,7 +29,7 @@ public class Yandex : MonoBehaviour
     public static extern void CallRate();
 
     [DllImport("__Internal")]
-    public static extern void CallPurchaseMenu(string id);
+    public static extern void CallPurchaseMenu(string id, string name);
 
     [DllImport("__Internal")]
     public static extern string GetPrice(int index);

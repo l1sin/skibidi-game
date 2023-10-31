@@ -80,8 +80,16 @@ mergeInto(LibraryManager.library, {
     })
   },
 
-  CallPurchaseMenu: function () {
-
+  CallPurchaseMenu: function (pID, upgradeBlock) {
+    var pIDstring = UTF8ToString(pID);
+    var upgradeBlockstring = UTF8ToString(upgradeBlock);
+    payments.purchase({ id: pIDstring }).then(purchase => {
+        myGameInstance.SendMessage(upgradeBlockstring, "BuyAllOnClick"); 
+    }).catch(err => {
+        // Покупка не удалась: в консоли разработчика не добавлен товар с таким id,
+        // пользователь не авторизовался, передумал и закрыл окно оплаты,
+        // истекло отведенное на покупку время, не хватило денег и т. д.
+    })
   },
 
   GetPrice: function (id) {
