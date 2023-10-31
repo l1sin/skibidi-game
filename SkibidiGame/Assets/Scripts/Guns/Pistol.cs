@@ -16,7 +16,6 @@ public class Pistol : GunTap
         {
             Transform objectHit = HitInfo.transform;
             GameObject particles = Instantiate(ImpactVFX, HitInfo.point, Quaternion.LookRotation(HitInfo.normal));
-            particles.transform.SetParent(objectHit);
             Destroy(particles, 5);
 
             IDamageable damageable = objectHit.GetComponentInParent<IDamageable>();
