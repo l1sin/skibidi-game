@@ -24,8 +24,8 @@ mergeInto(LibraryManager.library, {
           console.log('Video ad open.');
         },
         onRewarded: () => {
-          myGameInstance.SendMessage('GameController', 'ToggleMineAdBonus', 1);
-          console.log('Rewarded: Mine');
+          myGameInstance.SendMessage('MainMenuController', 'GetAdReward');
+          console.log('Rewarded 500 money');
         },
         onClose: () => {
           console.log('Video ad closed.');
@@ -80,13 +80,30 @@ mergeInto(LibraryManager.library, {
     })
   },
 
+  CallPurchaseMenu: function () {
+
+  },
+
+  GetPrice: function (id) {
+    //console.log('GetPrice');
+    //console.log(id);
+    //var price = gameShop[gameShop.indexOf(id)].priceValue
+    //console.log(price);
+    //return price;
+  },
+
+  GetYanIcon: function () {
+    //var url = gameShop[0].getPriceCurrencyImage(size: ECurrencyImageSize = ECurrencyImageSize.SMALL)
+    //myGameInstance.SendMessage("MainMenuController", "SetYanTexture", url); 
+  },
+
   CallRate: function()
   {
     ysdk.feedback.canReview()
     .then(({ value, reason }) => {
       if (value) 
       {
-        myGameInstance.SendMessage("GameController", "ShowRateWindow");
+        myGameInstance.SendMessage("MainMenuController", "ShowRateWindow");
       } 
       else 
       {

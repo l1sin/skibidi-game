@@ -58,7 +58,7 @@ public class Summary : MonoBehaviour
 
         Rank = GetRank();
         RankText.text = Rank;
-        Money = (Completed + 1) * LevelController.RewardPerObjective;
+        Money = (Completed + 1) * LevelController.RewardPerObjective * (SaveManager.Instance.CurrentLevelDifficulty + 1);
         MoneyAmountText.text = Money.ToString();
 
         SaveGame();

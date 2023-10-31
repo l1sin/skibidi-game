@@ -1,5 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
@@ -25,14 +27,21 @@ public class MainMenuController : MonoBehaviour
     public int[,] UpgradePrices;
     public int[,] GunPrices;
 
+    public int AdBonus;
+    public Texture YanTexure;
+
     public void Start()
     {
+#if UNITY_EDITOR
+        Debug.Log("FullScreenAd");
+#elif UNITY_WEBGL
+        Yandex.FullScreenAd();
+#endif
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         if (CanLoadData)
         {
             LoadData();
-            Debug.Log($"DataLoaded Money: {Progress.Money}");
         }
         UnlockLevels();
         SetRanks();
@@ -42,7 +51,57 @@ public class MainMenuController : MonoBehaviour
         UnlockGuns();
         UpgradePrices = Utility.Utility.ReadCSVInt("Prices/UpgradePrices");
         GunPrices = Utility.Utility.ReadCSVInt("Prices/GunPrices");
+#if UNITY_EDITOR
+        Debug.Log("LoadYanPrices");
+#elif UNITY_WEBGL
+        //Yandex.GetYanIcon();
+        //GetYanPrices();
+#endif
         UpdateBlocks();
+    }
+
+    public void GetYanPrices()
+    {
+        foreach (UpgradeBlock ub in UpgradeBlocks)
+        {
+            ub.BuyAllButtonText.text = Yandex.GetPrice(ub.PurchaseID);
+        }
+    }
+
+    public void SetYanTexture(string url)
+    {
+        StartCoroutine(DownloadYanImage(url));
+        foreach (UpgradeBlock ub in UpgradeBlocks)
+        {
+            ub.YanIcon.texture = YanTexure;
+        }
+    }
+
+    public IEnumerator DownloadYanImage(string mediaUrl)
+    {
+        UnityWebRequest request = UnityWebRequestTexture.GetTexture(mediaUrl);
+        yield return request.SendWebRequest();
+        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+        {
+            Debug.Log(request.error);
+        }
+        else
+        {
+            YanTexure = ((DownloadHandlerTexture)request.downloadHandler).texture;
+        }
+    }
+
+    public void GetAdReward()
+    {
+        GetMoney(AdBonus);
+    }
+
+    public void GetMoney(int money)
+    {
+        Progress.Money += money;
+        SetMoney();
+        UpdateBlocks();
+        SaveData();
     }
 
     public void LoadData()

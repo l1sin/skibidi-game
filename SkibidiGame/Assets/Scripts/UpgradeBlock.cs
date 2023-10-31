@@ -15,6 +15,8 @@ public class UpgradeBlock : MonoBehaviour
     public int ItemIndex;
     public ItemType _ItemType;
     public int Price;
+    public string PurchaseID;
+    public RawImage YanIcon;
     public enum ItemType
     {
         Upgrade,
@@ -88,6 +90,11 @@ public class UpgradeBlock : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void CallPurchaseMenu()
+    {
+
     }
 
     public void BuyOneOnClick()

@@ -120,3 +120,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelController: {fileID: 0}
   RotationSpeed: 1
+  PickupSound: {fileID: 8300000, guid: 83b6493dc171a014db1aea1d8819d86a, type: 3}

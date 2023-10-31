@@ -28,6 +28,15 @@ public class Yandex : MonoBehaviour
     [DllImport("__Internal")]
     public static extern void CallRate();
 
+    [DllImport("__Internal")]
+    public static extern void CallPurchaseMenu(string id);
+
+    [DllImport("__Internal")]
+    public static extern string GetPrice(string id);
+
+    [DllImport("__Internal")]
+    public static extern void GetYanIcon();
+
 
     private void Awake()
     {
