@@ -85,16 +85,17 @@ mergeInto(LibraryManager.library, {
   },
 
   GetPrice: function (id) {
-    //console.log('GetPrice');
-    //console.log(id);
-    //var price = gameShop[gameShop.indexOf(id)].priceValue
-    //console.log(price);
-    //return price;
+    var item = gameShop[id]
+    var price = item.priceValue;
+    var bufferSize = lengthBytesUTF8(price) + 1;
+    var buffer = _malloc(bufferSize);
+    stringToUTF8(price, buffer, bufferSize);
+    return buffer;
   },
 
   GetYanIcon: function () {
-    //var url = gameShop[0].getPriceCurrencyImage(size: ECurrencyImageSize = ECurrencyImageSize.SMALL)
-    //myGameInstance.SendMessage("MainMenuController", "SetYanTexture", url); 
+    var url = gameShop[0].getPriceCurrencyImage('medium')
+    myGameInstance.SendMessage("MainMenuController", "SetYanTexture", url); 
   },
 
   CallRate: function()

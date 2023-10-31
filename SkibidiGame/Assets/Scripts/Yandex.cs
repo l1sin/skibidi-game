@@ -32,7 +32,7 @@ public class Yandex : MonoBehaviour
     public static extern void CallPurchaseMenu(string id);
 
     [DllImport("__Internal")]
-    public static extern string GetPrice(string id);
+    public static extern string GetPrice(int index);
 
     [DllImport("__Internal")]
     public static extern void GetYanIcon();

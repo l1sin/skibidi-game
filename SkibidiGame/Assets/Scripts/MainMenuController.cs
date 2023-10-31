@@ -52,10 +52,12 @@ public class MainMenuController : MonoBehaviour
         UpgradePrices = Utility.Utility.ReadCSVInt("Prices/UpgradePrices");
         GunPrices = Utility.Utility.ReadCSVInt("Prices/GunPrices");
 #if UNITY_EDITOR
+        Debug.Log("LoadYanIcon");
         Debug.Log("LoadYanPrices");
+        SetYanTexture("https://yastatic.net/s3/games-static/static-data/images/payments/sdk/currency-icon-m.png");
 #elif UNITY_WEBGL
-        //Yandex.GetYanIcon();
-        //GetYanPrices();
+        Yandex.GetYanIcon();
+        GetYanPrices();
 #endif
         UpdateBlocks();
     }
@@ -64,17 +66,19 @@ public class MainMenuController : MonoBehaviour
     {
         foreach (UpgradeBlock ub in UpgradeBlocks)
         {
-            ub.BuyAllButtonText.text = Yandex.GetPrice(ub.PurchaseID);
+            ub.BuyAllButtonText.text = Yandex.GetPrice(ub.ProductIndex);
         }
+        foreach (UpgradeBlock ub in GunBlocks)
+        {
+            ub.BuyAllButtonText.text = Yandex.GetPrice(ub.ProductIndex);
+        }
+        Debug.Log("Prices set");
     }
 
     public void SetYanTexture(string url)
     {
         StartCoroutine(DownloadYanImage(url));
-        foreach (UpgradeBlock ub in UpgradeBlocks)
-        {
-            ub.YanIcon.texture = YanTexure;
-        }
+        Debug.Log("Icons set");
     }
 
     public IEnumerator DownloadYanImage(string mediaUrl)
@@ -88,6 +92,14 @@ public class MainMenuController : MonoBehaviour
         else
         {
             YanTexure = ((DownloadHandlerTexture)request.downloadHandler).texture;
+            foreach (var b in UpgradeBlocks)
+            {
+                b.YanIcon.texture = YanTexure;
+            }
+            foreach (var b in GunBlocks)
+            {
+                b.YanIcon.texture = YanTexure;
+            }
         }
     }
 

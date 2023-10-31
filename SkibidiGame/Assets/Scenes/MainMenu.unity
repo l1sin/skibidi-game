@@ -11193,6 +11193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5231913156692961528, guid: 52de7e435fdae6042aea00476faeac96,
         type: 3}
+      propertyPath: ProductIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231913156692961528, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
       propertyPath: MainMenuController
       value: 
       objectReference: {fileID: 1119661412}
@@ -11405,6 +11410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PurchaseID
       value: speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444314573681462351, guid: 52de7e435fdae6042aea00476faeac96,
+        type: 3}
+      propertyPath: ProductIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6444314573681462351, guid: 52de7e435fdae6042aea00476faeac96,
         type: 3}
@@ -11811,6 +11821,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1750215727971590259, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
+      propertyPath: ProductIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750215727971590259, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
       propertyPath: MainMenuController
       value: 
       objectReference: {fileID: 1119661412}
@@ -12043,6 +12058,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PurchaseID
       value: rifle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045998074498299284, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ProductIndex
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3045998074498299284, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
@@ -12401,6 +12421,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3904273478543000648, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
+      propertyPath: ProductIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3904273478543000648, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
       propertyPath: MainMenuController
       value: 
       objectReference: {fileID: 1119661412}
@@ -12493,6 +12518,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PurchaseID
       value: shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301007607171567907, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ProductIndex
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4301007607171567907, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
@@ -12756,6 +12786,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5475133978907211923, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
+      propertyPath: ProductIndex
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5475133978907211923, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
       propertyPath: MainMenuController
       value: 
       objectReference: {fileID: 1119661412}
@@ -13003,6 +13038,11 @@ PrefabInstance:
         type: 3}
       propertyPath: PurchaseID
       value: lasergun
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420841757239350005, guid: af54bd56fef66df42b79796f06b77811,
+        type: 3}
+      propertyPath: ProductIndex
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6420841757239350005, guid: af54bd56fef66df42b79796f06b77811,
         type: 3}
