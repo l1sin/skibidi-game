@@ -54,7 +54,7 @@ public class Enemy : EnemyBase, IDamageable
 
     public IEnumerator LookForPlayer()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         if (Physics.Raycast(LookPoint.position, Destination.position - LookPoint.position, out RaycastHit hitInfo, ViewDistance, ViewMask))
         {
             if (hitInfo.transform.gameObject.layer == 7)

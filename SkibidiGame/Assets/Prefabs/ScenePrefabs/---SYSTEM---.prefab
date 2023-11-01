@@ -2232,6 +2232,7 @@ MonoBehaviour:
   SpeedBonus: 0.2
   _jumpHeight: 1
   _characterController: {fileID: 2071793864078010150}
+  _velocity: {x: 0, y: 0, z: 0}
   _groundCheck: {fileID: 7311615429744909129}
   _groundCheckRadius: 0.49
   _whatIsGround:
@@ -3476,6 +3477,7 @@ GameObject:
   - component: {fileID: 5764432319732119726}
   - component: {fileID: 6509481811401286139}
   - component: {fileID: 3800478477938860475}
+  - component: {fileID: 2336836203017133172}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3573,6 +3575,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2336836203017133172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3721155484078542179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6db661978d825479ade0ee9f8b3268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect: {fileID: 6609457076673508764}
+  scaler: {fileID: 6509481811401286139}
 --- !u!1 &3861111435856091590
 GameObject:
   m_ObjectHideFlags: 0

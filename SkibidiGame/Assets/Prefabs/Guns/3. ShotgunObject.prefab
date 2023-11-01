@@ -76,7 +76,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 375
   CanSwitch: 1
-  Damage: 1
+  Damage: 2
   IsShooting: 0
   StartAmmo: 30
   AmmoLevel: 0

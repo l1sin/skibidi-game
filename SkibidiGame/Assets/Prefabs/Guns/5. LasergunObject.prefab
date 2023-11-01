@@ -373,7 +373,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 375
   CanSwitch: 1
-  Damage: 10
+  Damage: 15
   IsShooting: 0
   StartAmmo: 60
   AmmoLevel: 0
@@ -381,7 +381,7 @@ MonoBehaviour:
   GunLevel: 1
   AnimationSpeedModifyer: 1
   AmmoBonus: 0.2
-  DamageBonus: 0.7
+  DamageBonus: 1
   AnimationSpeedBonus: 0.125
   LaserBeam: {fileID: 3517683224650635633}
   Line: {fileID: 8573507891756592667}
