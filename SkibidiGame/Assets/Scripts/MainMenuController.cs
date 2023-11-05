@@ -1,9 +1,11 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -44,6 +46,7 @@ public class MainMenuController : MonoBehaviour
         {
             LoadData();
         }
+
         UnlockLevels();
         SetRanks();
         UnlockLastLevel();
@@ -52,6 +55,7 @@ public class MainMenuController : MonoBehaviour
         UnlockGuns();
         UpgradePrices = Utility.Utility.ReadCSVInt("Prices/UpgradePrices");
         GunPrices = Utility.Utility.ReadCSVInt("Prices/GunPrices");
+        UpdateBlocks();
 #if UNITY_EDITOR
         Debug.Log("LoadYanIcon");
         Debug.Log("LoadYanPrices");
@@ -59,38 +63,23 @@ public class MainMenuController : MonoBehaviour
 #elif UNITY_WEBGL
         Yandex.GetYanIcon();
         GetYanPrices();
+        Yandex.CheckPurchases();
+        Yandex.GameReady();
 #endif
-        UpdateBlocks();
     }
 
-    //public void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.KeypadMinus))
-    //    {
-    //        Progress = new Progress();
-    //        SaveManager.Instance.SaveData(Progress);
-    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    //    }
-    //    if (Input.GetKeyDown(KeyCode.KeypadPlus))
-    //    {
-    //        Progress = new Progress();
-    //        Progress.Level = 31;
-    //        for (int i = 0; i < Progress.UpgradeLevel.Length; i++)
-    //        {
-    //            Progress.UpgradeLevel[i] = 5;
-    //        }
-    //        for (int i = 0; i < Progress.GunLevel.Length; i++)
-    //        {
-    //            Progress.GunLevel[i] = 5;
-    //        }
-    //        for (int i = 0; i< Progress.LevelRank.Length; i++)
-    //        {
-    //            Progress.LevelRank[i] = "S";
-    //        }
-    //        SaveManager.Instance.SaveData(Progress);
-    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    //    }
-    //}
+    public void CheckPurchase(string purchaseinfo)
+    {
+        string[] info = purchaseinfo.Split(',', System.StringSplitOptions.None);
+        foreach (UpgradeBlock ub in UpgradeBlocks)
+        {
+            if (ub.PurchaseID == info[0]) ub.BuyAllOnClick(info[1]);
+        }
+        foreach (UpgradeBlock ub in GunBlocks)
+        {
+            if (ub.PurchaseID == info[0]) ub.BuyAllOnClick(info[1]);
+        }
+    }
 
     public void GetYanPrices()
     {

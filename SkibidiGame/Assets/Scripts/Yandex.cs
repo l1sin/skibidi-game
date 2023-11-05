@@ -37,6 +37,15 @@ public class Yandex : MonoBehaviour
     [DllImport("__Internal")]
     public static extern void GetYanIcon();
 
+    [DllImport("__Internal")]
+    public static extern void GameReady();
+
+    [DllImport("__Internal")]
+    public static extern void ConsumePurchase(string purchaseToken);
+
+    [DllImport("__Internal")]
+    public static extern void CheckPurchases();
+
 
     private void Awake()
     {
