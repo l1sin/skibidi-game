@@ -98,7 +98,7 @@ public class UpgradeBlock : MonoBehaviour
 #if UNITY_EDITOR
         Debug.Log("CallPurchaseMenu");
         Debug.Log(gameObject.name);
-        BuyAllOnClick();
+        BuyAllOnClick("1234567890-1234567890");
 #elif UNITY_WEBGL
         Yandex.CallPurchaseMenu(PurchaseID, gameObject.name);
 #endif
@@ -127,7 +127,7 @@ public class UpgradeBlock : MonoBehaviour
         }
     }
 
-    public void BuyAllOnClick()
+    public void BuyAllOnClick(string token)
     {
         if (_ItemType == ItemType.Upgrade)
         {
@@ -140,6 +140,12 @@ public class UpgradeBlock : MonoBehaviour
         UnlockLockers(5);
         CheckIfMaxLevel();
         MainMenuController.SaveData();
+#if UNITY_EDITOR
+        Debug.Log($"Token {token} consumed");
+#elif UNITY_WEBGL
+        Debug.Log(token);
+        Yandex.ConsumePurchase(token);
+#endif
     }
 
 

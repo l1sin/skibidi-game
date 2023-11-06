@@ -80,11 +80,11 @@ mergeInto(LibraryManager.library, {
     })
   },
 
-  CallPurchaseMenu: function (pID, upgradeBlock) {
+  CallPurchaseMenu: function (pID, name) {
     var pIDstring = UTF8ToString(pID);
-    var upgradeBlockstring = UTF8ToString(upgradeBlock);
+    var namestring = UTF8ToString(name);
     payments.purchase({ id: pIDstring }).then(purchase => {
-        myGameInstance.SendMessage(upgradeBlockstring, "BuyAllOnClick"); 
+      myGameInstance.SendMessage(namestring, 'BuyAllOnClick', purchase.purchaseToken); 
     }).catch(err => {
         // Покупка не удалась: в консоли разработчика не добавлен товар с таким id,
         // пользователь не авторизовался, передумал и закрыл окно оплаты,
@@ -103,7 +103,25 @@ mergeInto(LibraryManager.library, {
 
   GetYanIcon: function () {
     var url = gameShop[0].getPriceCurrencyImage('medium')
-    myGameInstance.SendMessage("MainMenuController", "SetYanTexture", url); 
+    myGameInstance.SendMessage('MainMenuController', 'SetYanTexture', url); 
+  },
+
+  GameReady: function () {
+    ready();
+  },
+
+  ConsumePurchase: function (purchaseToken) {
+    var tokenString = UTF8ToString(purchaseToken);
+    payments.consumePurchase(tokenString);
+    console.log('Purchase consumed');
+  },
+
+  CheckPurchases: function () {
+    payments.getPurchases().then(purchases => purchases.forEach((purchase) =>{
+      var info = purchase.productID + ',' + purchase.purchaseToken;
+      console.log(info);
+      myGameInstance.SendMessage('MainMenuController', 'CheckPurchase', info); 
+    }));
   },
 
   CallRate: function()
@@ -112,7 +130,7 @@ mergeInto(LibraryManager.library, {
     .then(({ value, reason }) => {
       if (value) 
       {
-        myGameInstance.SendMessage("MainMenuController", "ShowRateWindow");
+        myGameInstance.SendMessage('MainMenuController', 'howRateWindow');
       } 
       else 
       {
