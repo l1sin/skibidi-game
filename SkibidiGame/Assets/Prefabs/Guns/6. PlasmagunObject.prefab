@@ -146,13 +146,73 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 609159793140437487, guid: 59d7ddb62ddadd04fb71eb338008de2a,
         type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 609159793140437487, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 609159793140437487, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: CollisionModule.quality
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 609159793140437487, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.2
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 609159793140437487, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 609159793140437487, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 609159793140437487, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 609159793140437487, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 609159793140437487, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 609159793140437487, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minScalar
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1461813227059404931, guid: 59d7ddb62ddadd04fb71eb338008de2a,
         type: 3}
       propertyPath: m_Name
       value: PlasmaMuzzleParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441157067909440628, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441157067909440628, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441157067909440628, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5441157067909440628, guid: 59d7ddb62ddadd04fb71eb338008de2a,
         type: 3}
@@ -204,6 +264,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5441157067909440628, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220844381108037058, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220844381108037058, guid: 59d7ddb62ddadd04fb71eb338008de2a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6dcab66742e729d44b16cae413f61e03, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

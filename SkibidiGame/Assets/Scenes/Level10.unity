@@ -5594,7 +5594,7 @@ MonoBehaviour:
   Finish: {fileID: 607510501}
   IsAlive: 1
   HealthCurrent: 0
-  HealthMax: 100
+  HealthMax: 75
   DeathSound: {fileID: 8300000, guid: 309eefa7ef9796d499d17b8664288aa7, type: 3}
   LevelController: {fileID: 1614137742}
   Animator: {fileID: 8555339159018772363}

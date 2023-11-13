@@ -356,7 +356,7 @@ MonoBehaviour:
   CharacterHealth: {fileID: 0}
   LevelController: {fileID: 0}
   Body: {fileID: 7229104706566541763}
-  HealthMax: 150
+  HealthMax: 125
   HealthCurrent: 0
   Agent: {fileID: 8272734240842474680}
   Destination: {fileID: 0}

@@ -2228,8 +2228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c326591d67f0246968713df4ca4b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  SpeedBonus: 0.2
+  Speed: 7
+  SpeedBonus: 0.15
   _jumpHeight: 1
   _characterController: {fileID: 2071793864078010150}
   _velocity: {x: 0, y: 0, z: 0}

@@ -103,17 +103,17 @@ PrefabInstance:
     - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
         type: 3}
@@ -163,6 +163,16 @@ PrefabInstance:
     - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095059767657833333, guid: 2867de957ed59b848a72f70a6e9f19e5,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2677782634908320857, guid: 2867de957ed59b848a72f70a6e9f19e5,

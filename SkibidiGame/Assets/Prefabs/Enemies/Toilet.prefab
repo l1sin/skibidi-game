@@ -170,22 +170,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6012bede1475dba4ead393ef939f820f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.65
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6012bede1475dba4ead393ef939f820f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.24
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6012bede1475dba4ead393ef939f820f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 35.72
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6012bede1475dba4ead393ef939f820f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6012bede1475dba4ead393ef939f820f,
         type: 3}
@@ -195,7 +195,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6012bede1475dba4ead393ef939f820f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6012bede1475dba4ead393ef939f820f,
         type: 3}
@@ -210,7 +210,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6012bede1475dba4ead393ef939f820f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6012bede1475dba4ead393ef939f820f,
         type: 3}
@@ -330,7 +330,7 @@ MonoBehaviour:
   CharacterHealth: {fileID: 0}
   LevelController: {fileID: 0}
   Body: {fileID: 928408971504096162}
-  HealthMax: 5
+  HealthMax: 4
   HealthCurrent: 0
   Agent: {fileID: 6288417346168249543}
   Destination: {fileID: 0}
@@ -341,7 +341,7 @@ MonoBehaviour:
   AttackRange: 2
   Damage: 10
   Animator: {fileID: 7232313473678447483}
-  HealthBuff: 5
+  HealthBuff: 3
   SpeedBuff: 0.75
   DamageBuff: 1
   IsAlive: 1

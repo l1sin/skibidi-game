@@ -523,7 +523,7 @@ MonoBehaviour:
   CharacterHealth: {fileID: 0}
   LevelController: {fileID: 0}
   Body: {fileID: 5978191134510828837}
-  HealthMax: 15
+  HealthMax: 10
   HealthCurrent: 0
   Agent: {fileID: 1428529319136683861}
   Destination: {fileID: 0}
@@ -534,7 +534,7 @@ MonoBehaviour:
   AttackRange: 4
   Damage: 20
   Animator: {fileID: 9032391179751819248}
-  HealthBuff: 5
+  HealthBuff: 3
   SpeedBuff: 0.75
   DamageBuff: 1
   IsAlive: 1
