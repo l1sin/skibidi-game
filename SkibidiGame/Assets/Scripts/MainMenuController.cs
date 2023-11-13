@@ -68,34 +68,34 @@ public class MainMenuController : MonoBehaviour
 #endif
     }
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.KeypadMinus))
-        {
-            Progress = new Progress();
-            SaveManager.Instance.SaveData(Progress);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        if (Input.GetKeyDown(KeyCode.KeypadPlus))
-        {
-            Progress = new Progress();
-            Progress.Level = 31;
-            for (int i = 0; i < Progress.UpgradeLevel.Length; i++)
-            {
-                Progress.UpgradeLevel[i] = 5;
-            }
-            for (int i = 0; i < Progress.GunLevel.Length; i++)
-            {
-                Progress.GunLevel[i] = 5;
-            }
-            for (int i = 0; i < Progress.LevelRank.Length; i++)
-            {
-                Progress.LevelRank[i] = "S";
-            }
-            SaveManager.Instance.SaveData(Progress);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-    }
+    //public void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.KeypadMinus))
+    //    {
+    //        Progress = new Progress();
+    //        SaveManager.Instance.SaveData(Progress);
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.KeypadPlus))
+    //    {
+    //        Progress = new Progress();
+    //        Progress.Level = 31;
+    //        for (int i = 0; i < Progress.UpgradeLevel.Length; i++)
+    //        {
+    //            Progress.UpgradeLevel[i] = 5;
+    //        }
+    //        for (int i = 0; i < Progress.GunLevel.Length; i++)
+    //        {
+    //            Progress.GunLevel[i] = 5;
+    //        }
+    //        for (int i = 0; i < Progress.LevelRank.Length; i++)
+    //        {
+    //            Progress.LevelRank[i] = "S";
+    //        }
+    //        SaveManager.Instance.SaveData(Progress);
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    //    }
+    //}
 
     public void CheckPurchase(string purchaseinfo)
     {
