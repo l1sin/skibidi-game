@@ -12,7 +12,7 @@ public class Rifle : GunTap
             CanSwitch = false;
             Animator.SetTrigger("Shoot");
             ShotVFX.Play();
-            SoundManager.Instance.PlaySound(shotSound);
+            SoundManager.Instance.PlaySound(shotSound, AudioMixerGroup);
 
             RaycastHit HitInfo;
             if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out HitInfo, 100.0f, Targets))

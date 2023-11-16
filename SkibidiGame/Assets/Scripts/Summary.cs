@@ -1,5 +1,7 @@
+using Sounds;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Summary : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class Summary : MonoBehaviour
     public TextMeshProUGUI[] ObjectiveResultTexts;
     public TextMeshProUGUI RankText;
     public TextMeshProUGUI MoneyAmountText;
+    public AudioSource LevelMusic;
 
     public Color[] RankColors;
     int Completed;
@@ -62,6 +65,15 @@ public class Summary : MonoBehaviour
         MoneyAmountText.text = Money.ToString();
 
         SaveGame();
+    }
+
+    public void DoubleReward()
+    {
+        SoundManager.Instance.AudioMixerSetFloat("VolumeMaster", 0);
+        SaveManager.Instance.CurrentProgress.Money += Money;
+        SaveManager.Instance.SaveData(SaveManager.Instance.CurrentProgress);
+        Money *= 2;
+        MoneyAmountText.text = Money.ToString();
     }
 
     public string GetRank()

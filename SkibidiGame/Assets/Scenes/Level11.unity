@@ -165,7 +165,8 @@ MonoBehaviour:
   LevelController: {fileID: 1747901851}
   Animator: {fileID: 47581251}
   Explosion: {fileID: 8300000, guid: 46985d8eaf66aa0419b64ab1e00bdaf7, type: 3}
-  EarthQuake: {fileID: 8300000, guid: 15393cf5e3a5de4418b3bc95d0517500, type: 3}
+  AudioMixerGroup: {fileID: -1829288485760705229, guid: fc8a03c61dda7cd43880b998c676da32,
+    type: 2}
   LookTarget: {fileID: 1070724035}
   Finish: {fileID: 1960917035}
   LaserMain: {fileID: 1785701239}

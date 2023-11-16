@@ -83,6 +83,8 @@ MonoBehaviour:
   Ammo: 300
   GunLevel: 1
   AnimationSpeedModifyer: 1
+  AudioMixerGroup: {fileID: -1829288485760705229, guid: fc8a03c61dda7cd43880b998c676da32,
+    type: 2}
   AmmoBonus: 0.2
   DamageBonus: 0.25
   AnimationSpeedBonus: 0.125

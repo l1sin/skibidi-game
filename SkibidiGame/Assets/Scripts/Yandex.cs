@@ -14,7 +14,10 @@ public class Yandex : MonoBehaviour
     public static extern void Rate();
 
     [DllImport("__Internal")]
-    public static extern void WatchAd();
+    public static extern void WatchAdAdd();
+
+    [DllImport("__Internal")]
+    public static extern void WatchAdDouble();
 
     [DllImport("__Internal")]
     public static extern void SaveExtern(string data);

@@ -14,7 +14,7 @@ public class Shotgun : GunTap
             CanSwitch = false;
             Animator.SetTrigger("Shoot");
             ShotVFX.Play();
-            SoundManager.Instance.PlaySound(shotSound);
+            SoundManager.Instance.PlaySound(shotSound, AudioMixerGroup);
 
             RaycastHit HitInfo;
             for (int i = 0; i < Bullets; i++)

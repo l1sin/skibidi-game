@@ -2380,6 +2380,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 221652534}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &221652536 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642068832983116030, guid: f3d69185bb447b843b8b4410220cb4f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 221652534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa96cc3a2b6586544ac9297639b1caf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &260228504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14873,7 +14885,7 @@ PrefabInstance:
     - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
         type: 3}
       propertyPath: Collectibles.Array.size
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
         type: 3}
@@ -14919,40 +14931,50 @@ PrefabInstance:
         type: 3}
       propertyPath: Collectibles.Array.data[8]
       value: 
-      objectReference: {fileID: 480138893}
+      objectReference: {fileID: 221652536}
     - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
         type: 3}
       propertyPath: Collectibles.Array.data[9]
       value: 
-      objectReference: {fileID: 941250585}
+      objectReference: {fileID: 1974832559}
     - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
         type: 3}
       propertyPath: Collectibles.Array.data[10]
       value: 
-      objectReference: {fileID: 1371891823}
+      objectReference: {fileID: 480138893}
     - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
         type: 3}
       propertyPath: Collectibles.Array.data[11]
       value: 
-      objectReference: {fileID: 1223875312}
+      objectReference: {fileID: 941250585}
     - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
         type: 3}
       propertyPath: Collectibles.Array.data[12]
       value: 
-      objectReference: {fileID: 1282214312}
+      objectReference: {fileID: 1371891823}
     - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
         type: 3}
       propertyPath: Collectibles.Array.data[13]
       value: 
-      objectReference: {fileID: 1255439440}
+      objectReference: {fileID: 1223875312}
     - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
         type: 3}
       propertyPath: Collectibles.Array.data[14]
       value: 
-      objectReference: {fileID: 260228506}
+      objectReference: {fileID: 1282214312}
     - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
         type: 3}
       propertyPath: Collectibles.Array.data[15]
+      value: 
+      objectReference: {fileID: 1255439440}
+    - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
+        type: 3}
+      propertyPath: Collectibles.Array.data[16]
+      value: 
+      objectReference: {fileID: 260228506}
+    - target: {fileID: 2938181693694750716, guid: 633f84898ff7ade44a0d67c10c50d6d1,
+        type: 3}
+      propertyPath: Collectibles.Array.data[17]
       value: 
       objectReference: {fileID: 991424918}
     - target: {fileID: 4405515339863798920, guid: 633f84898ff7ade44a0d67c10c50d6d1,
@@ -31107,6 +31129,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1974832557}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1974832559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6642068832983116030, guid: f3d69185bb447b843b8b4410220cb4f5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1974832557}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa96cc3a2b6586544ac9297639b1caf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2052338099
 PrefabInstance:
   m_ObjectHideFlags: 0

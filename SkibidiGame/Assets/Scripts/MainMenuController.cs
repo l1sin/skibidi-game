@@ -1,11 +1,9 @@
 using System.Collections;
 using TMPro;
-using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static System.Net.Mime.MediaTypeNames;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -32,6 +30,9 @@ public class MainMenuController : MonoBehaviour
 
     public int AdBonus;
     public Texture YanTexure;
+
+    public GameObject Console;
+    public TMP_InputField InputField;
 
     public void Start()
     {
@@ -68,34 +69,59 @@ public class MainMenuController : MonoBehaviour
 #endif
     }
 
-    //public void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.KeypadMinus))
-    //    {
-    //        Progress = new Progress();
-    //        SaveManager.Instance.SaveData(Progress);
-    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    //    }
-    //    if (Input.GetKeyDown(KeyCode.KeypadPlus))
-    //    {
-    //        Progress = new Progress();
-    //        Progress.Level = 31;
-    //        for (int i = 0; i < Progress.UpgradeLevel.Length; i++)
-    //        {
-    //            Progress.UpgradeLevel[i] = 5;
-    //        }
-    //        for (int i = 0; i < Progress.GunLevel.Length; i++)
-    //        {
-    //            Progress.GunLevel[i] = 5;
-    //        }
-    //        for (int i = 0; i < Progress.LevelRank.Length; i++)
-    //        {
-    //            Progress.LevelRank[i] = "S";
-    //        }
-    //        SaveManager.Instance.SaveData(Progress);
-    //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    //    }
-    //}
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.BackQuote))
+        {
+            Console.SetActive(!Console.activeInHierarchy);
+        }
+        if (Console.activeInHierarchy && Input.GetKeyDown(KeyCode.Return))
+        {
+            switch (InputField.text)
+            {
+                case "-progress":
+                    SetProgress(false);
+                    break;
+                case "+progress":
+                    SetProgress(true);
+                    break;
+                case "money":
+                    GetMoney(10000);
+                    break;
+                default: break;
+            }
+            Console.SetActive(!Console.activeInHierarchy);
+        }
+    }
+
+    public void SetProgress(bool progress)
+    {
+        if (progress)
+        {
+            Progress = new Progress();
+            Progress.Level = 31;
+            for (int i = 0; i < Progress.UpgradeLevel.Length; i++)
+            {
+                Progress.UpgradeLevel[i] = 5;
+            }
+            for (int i = 0; i < Progress.GunLevel.Length; i++)
+            {
+                Progress.GunLevel[i] = 5;
+            }
+            for (int i = 0; i < Progress.LevelRank.Length; i++)
+            {
+                Progress.LevelRank[i] = "S";
+            }
+            SaveManager.Instance.SaveData(Progress);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        else
+        {
+            Progress = new Progress();
+            SaveManager.Instance.SaveData(Progress);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
 
     public void CheckPurchase(string purchaseinfo)
     {
