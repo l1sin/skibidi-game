@@ -7,7 +7,7 @@ public class AdButton : MonoBehaviour
     {
         SoundManager.Instance.AudioMixerSetFloat("VolumeMaster", -80);
 #if UNITY_EDITOR
-        Debug.Log("Rewarded ad add");
+        Debug.Log("Rewarded ad double");
 #elif UNITY_WEBGL
         Yandex.WatchAdDouble();
 #endif
@@ -18,7 +18,7 @@ public class AdButton : MonoBehaviour
     {
         SoundManager.Instance.AudioMixerSetFloat("VolumeMaster", -80);
 #if UNITY_EDITOR
-        Debug.Log("Rewarded ad double");
+        Debug.Log("Rewarded ad add");
 #elif UNITY_WEBGL
         Yandex.WatchAdAdd();
 #endif
