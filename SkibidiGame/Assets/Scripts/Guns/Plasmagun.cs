@@ -18,7 +18,7 @@ public class Plasmagun : GunTap
             CanSwitch = false;
             Animator.SetTrigger("Shoot");
             ShotVFX.Play();
-            SoundManager.Instance.PlaySound(shotSound);
+            SoundManager.Instance.PlaySound(shotSound, AudioMixerGroup);
 
             RaycastHit HitInfo;
             if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out HitInfo, 100.0f, Targets))
@@ -29,6 +29,7 @@ public class Plasmagun : GunTap
                 Destroy(beamObj, 5);
 
                 GameObject particles = Instantiate(ImpactVFX, HitInfo.point, Quaternion.LookRotation(HitInfo.normal));
+                particles.transform.localScale = new Vector3(Radius, Radius, Radius);
                 Destroy(particles, 5);
 
                 Collider[] targets = Physics.OverlapSphere(HitInfo.point, Radius, Targets);

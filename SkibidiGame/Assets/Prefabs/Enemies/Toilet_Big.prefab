@@ -523,7 +523,7 @@ MonoBehaviour:
   CharacterHealth: {fileID: 0}
   LevelController: {fileID: 0}
   Body: {fileID: 5978191134510828837}
-  HealthMax: 15
+  HealthMax: 10
   HealthCurrent: 0
   Agent: {fileID: 1428529319136683861}
   Destination: {fileID: 0}
@@ -534,12 +534,14 @@ MonoBehaviour:
   AttackRange: 4
   Damage: 20
   Animator: {fileID: 9032391179751819248}
-  HealthBuff: 5
+  HealthBuff: 3
   SpeedBuff: 0.75
   DamageBuff: 1
   IsAlive: 1
   AudioSource: {fileID: 1131745740789592615}
   DeathSound: {fileID: 8300000, guid: 309eefa7ef9796d499d17b8664288aa7, type: 3}
+  AudioMixerGroup: {fileID: -1829288485760705229, guid: fc8a03c61dda7cd43880b998c676da32,
+    type: 2}
   ViewDistance: 40
 --- !u!195 &1428529319136683861
 NavMeshAgent:

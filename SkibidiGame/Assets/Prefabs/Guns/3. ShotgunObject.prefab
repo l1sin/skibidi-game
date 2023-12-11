@@ -83,6 +83,8 @@ MonoBehaviour:
   Ammo: 30
   GunLevel: 1
   AnimationSpeedModifyer: 1
+  AudioMixerGroup: {fileID: -1829288485760705229, guid: fc8a03c61dda7cd43880b998c676da32,
+    type: 2}
   AmmoBonus: 0.2
   DamageBonus: 0.25
   AnimationSpeedBonus: 0.125
@@ -103,17 +105,17 @@ PrefabInstance:
     - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
         type: 3}
@@ -163,6 +165,16 @@ PrefabInstance:
     - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 67675232545845046, guid: 2867de957ed59b848a72f70a6e9f19e5,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095059767657833333, guid: 2867de957ed59b848a72f70a6e9f19e5,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2677782634908320857, guid: 2867de957ed59b848a72f70a6e9f19e5,

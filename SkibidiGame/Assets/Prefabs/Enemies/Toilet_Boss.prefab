@@ -356,7 +356,7 @@ MonoBehaviour:
   CharacterHealth: {fileID: 0}
   LevelController: {fileID: 0}
   Body: {fileID: 7229104706566541763}
-  HealthMax: 150
+  HealthMax: 125
   HealthCurrent: 0
   Agent: {fileID: 8272734240842474680}
   Destination: {fileID: 0}
@@ -373,6 +373,8 @@ MonoBehaviour:
   IsAlive: 1
   AudioSource: {fileID: 658681658548433036}
   DeathSound: {fileID: 8300000, guid: 309eefa7ef9796d499d17b8664288aa7, type: 3}
+  AudioMixerGroup: {fileID: -1829288485760705229, guid: fc8a03c61dda7cd43880b998c676da32,
+    type: 2}
   ViewDistance: 40
   HPBarImage: {fileID: 0}
   HPBarObject: {fileID: 0}

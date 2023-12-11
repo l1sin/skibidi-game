@@ -2,6 +2,7 @@ using Sounds;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 
 public class Enemy : EnemyBase, IDamageable
 {
@@ -31,6 +32,7 @@ public class Enemy : EnemyBase, IDamageable
 
     public GameObject AudioSource;
     public AudioClip DeathSound;
+    public AudioMixerGroup AudioMixerGroup;
 
     public float ViewDistance;
 
@@ -94,7 +96,7 @@ public class Enemy : EnemyBase, IDamageable
         LevelController.OnEnemyKilled();
         Animator.SetTrigger("Death");
         Destroy(Agent);
-        SoundManager.Instance.PlaySound(DeathSound);
+        SoundManager.Instance.PlaySound(DeathSound, AudioMixerGroup);
     }
 
     public virtual void OnDeathAnimationEnd()

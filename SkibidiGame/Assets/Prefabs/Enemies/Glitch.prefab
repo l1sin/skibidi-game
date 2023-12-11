@@ -461,7 +461,7 @@ MonoBehaviour:
   _path: {x: 0, y: 0, z: 0}
   _afterImageCount: 10
   _lifeTime: 0.05
-  _sound: {fileID: 8300000, guid: 2331cc51370d9fa438cec181db6ce163, type: 3}
+  _sound: {fileID: 8300000, guid: 7af91aa69b119964ca6c48cca575d5d4, type: 3}
   LookTarget: {fileID: 0}
   AfterImage: {fileID: 2909442206290799398}
   DashDelay: 3
@@ -473,9 +473,19 @@ MonoBehaviour:
   HealthCurrent: 0
   HealthMax: 20
   DeathSound: {fileID: 8300000, guid: 309eefa7ef9796d499d17b8664288aa7, type: 3}
+  AudioMixerGroup: {fileID: -1829288485760705229, guid: fc8a03c61dda7cd43880b998c676da32,
+    type: 2}
   LevelController: {fileID: 0}
   Animator: {fileID: 0}
   HPBar: {fileID: 0}
+  CharacterHealth: {fileID: 0}
+  AudioSource: {fileID: 0}
+  AttackRange: 0
+  StopDistance: 0
+  Damage: 0
+  HealthBuff: 0
+  DamageBuff: 0
+  SpeedBuff: 0
 --- !u!1 &3443027626502151683 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 676377921642123097, guid: 1e80f73c71c576b4fb36c17aaa27d0bb,

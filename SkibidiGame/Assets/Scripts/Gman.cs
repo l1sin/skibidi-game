@@ -1,6 +1,7 @@
 using Sounds;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class Gman : EnemyBase, IDamageable
@@ -14,7 +15,7 @@ public class Gman : EnemyBase, IDamageable
     public LevelController LevelController;
     public Animator Animator;
     public AudioClip Explosion;
-    public AudioClip EarthQuake;
+    public AudioMixerGroup AudioMixerGroup;
     public Transform LookTarget;
     public GameObject Finish;
     public GameObject LaserMain;
@@ -84,14 +85,13 @@ public class Gman : EnemyBase, IDamageable
         LevelController.OnEnemyKilled();
         AnimationState = -1;
         Animator.SetInteger("AnimationState", AnimationState);
-        SoundManager.Instance.PlaySound(EarthQuake);
     }
 
     public void OnDeathAnimationEnd()
     {
         HPBarObject.SetActive(false);
         Finish.SetActive(true);
-        SoundManager.Instance.PlaySound(Explosion);
+        SoundManager.Instance.PlaySound(Explosion, AudioMixerGroup);
         Destroy(gameObject);
     }
 

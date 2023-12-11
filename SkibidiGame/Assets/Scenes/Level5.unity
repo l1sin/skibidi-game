@@ -20339,6 +20339,11 @@ PrefabInstance:
       propertyPath: TurnOffOnLevelFinished.Array.data[6]
       value: 
       objectReference: {fileID: 1910406385}
+    - target: {fileID: 3361622096333245937, guid: 633f84898ff7ade44a0d67c10c50d6d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4405515339863798920, guid: 633f84898ff7ade44a0d67c10c50d6d1,
         type: 3}
       propertyPath: m_AnchorMax.y

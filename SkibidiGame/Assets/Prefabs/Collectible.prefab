@@ -121,3 +121,5 @@ MonoBehaviour:
   LevelController: {fileID: 0}
   RotationSpeed: 1
   PickupSound: {fileID: 8300000, guid: 83b6493dc171a014db1aea1d8819d86a, type: 3}
+  AudioMixerGroup: {fileID: -1829288485760705229, guid: fc8a03c61dda7cd43880b998c676da32,
+    type: 2}

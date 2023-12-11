@@ -17,7 +17,7 @@ mergeInto(LibraryManager.library, {
     })
   },
 
-  WatchAd: function () {
+  WatchAdAdd: function () {
     ysdk.adv.showRewardedVideo({
       callbacks: {
         onOpen: () => {
@@ -26,6 +26,26 @@ mergeInto(LibraryManager.library, {
         onRewarded: () => {
           myGameInstance.SendMessage('MainMenuController', 'GetAdReward');
           console.log('Rewarded 500 money');
+        },
+        onClose: () => {
+          console.log('Video ad closed.');
+        }, 
+        onError: (e) => {
+          console.log('Error while open video ad:', e);
+        }
+      }
+    })
+  },
+
+  WatchAdDouble: function () {
+    ysdk.adv.showRewardedVideo({
+      callbacks: {
+        onOpen: () => {
+          console.log('Video ad open.');
+        },
+        onRewarded: () => {
+          myGameInstance.SendMessage('Level Finished', 'DoubleReward');
+          console.log('Rewarded double money');
         },
         onClose: () => {
           console.log('Video ad closed.');

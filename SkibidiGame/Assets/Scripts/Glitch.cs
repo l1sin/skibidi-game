@@ -1,6 +1,7 @@
 using Sounds;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class Glitch : EnemyBase, IDamageable
@@ -27,6 +28,7 @@ public class Glitch : EnemyBase, IDamageable
     public float HealthCurrent;
     public float HealthMax;
     public AudioClip DeathSound;
+    public AudioMixerGroup AudioMixerGroup;
     public LevelController LevelController;
     public Animator Animator;
     public Image HPBar;
@@ -82,7 +84,7 @@ public class Glitch : EnemyBase, IDamageable
         LastPoint = transform.position;
         CurrentPoint = Random.Range(0, _points.Length);
         transform.position = _points[CurrentPoint].position;
-        SoundManager.Instance.PlaySound(_sound);
+        SoundManager.Instance.PlaySound(_sound, AudioMixerGroup);
     }
 
     private void CreateAfterImage()
@@ -124,7 +126,7 @@ public class Glitch : EnemyBase, IDamageable
     {
         LevelController.OnEnemyKilled();
         Animator.SetTrigger("Death");
-        SoundManager.Instance.PlaySound(DeathSound);
+        SoundManager.Instance.PlaySound(DeathSound, AudioMixerGroup);
     }
 
     public void Attack()

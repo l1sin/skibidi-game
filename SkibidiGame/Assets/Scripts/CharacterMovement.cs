@@ -1,5 +1,6 @@
 using Sounds;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class CharacterMovement : MonoBehaviour
     public AudioClip[] StepSounds;
     public AudioClip[] JumpSounds;
     public AudioClip[] LandSounds;
+    public AudioMixerGroup AudioMixerGroup;
     public Animator Animator;
 
     public void Start()
@@ -33,7 +35,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void MakeStepSound()
     {
-        SoundManager.Instance.PlaySoundRandom(StepSounds);
+        SoundManager.Instance.PlaySoundRandom(StepSounds, AudioMixerGroup);
     }
 
     public void SetSpeedLevel(int SpeedLevel)
@@ -46,12 +48,12 @@ public class CharacterMovement : MonoBehaviour
         if (!IsGrounded)
         {
             IsGrounded = Physics.CheckSphere(_groundCheck.position, _groundCheckRadius, _whatIsGround);
-            if (IsGrounded) SoundManager.Instance.PlaySoundRandom(LandSounds);
+            if (IsGrounded) SoundManager.Instance.PlaySoundRandom(LandSounds, AudioMixerGroup);
         }
         else
         {
             IsGrounded = Physics.CheckSphere(_groundCheck.position, _groundCheckRadius, _whatIsGround);
-            if (!IsGrounded) SoundManager.Instance.PlaySoundRandom(JumpSounds);
+            if (!IsGrounded) SoundManager.Instance.PlaySoundRandom(JumpSounds, AudioMixerGroup);
         }
 
         float x = CharacterInput.MoveInputX;

@@ -1,3 +1,4 @@
+using Sounds;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class Summary : MonoBehaviour
     public TextMeshProUGUI[] ObjectiveResultTexts;
     public TextMeshProUGUI RankText;
     public TextMeshProUGUI MoneyAmountText;
+    public AudioSource LevelMusic;
 
     public Color[] RankColors;
     int Completed;
@@ -62,6 +64,16 @@ public class Summary : MonoBehaviour
         MoneyAmountText.text = Money.ToString();
 
         SaveGame();
+
+    }
+
+    public void DoubleReward()
+    {
+        SoundManager.Instance.AudioMixerSetFloat("VolumeMaster", 0);
+        SaveManager.Instance.CurrentProgress.Money += Money;
+        SaveManager.Instance.SaveData(SaveManager.Instance.CurrentProgress);
+        Money *= 2;
+        MoneyAmountText.text = Money.ToString();
     }
 
     public string GetRank()
@@ -120,12 +132,29 @@ public class Summary : MonoBehaviour
         }
 
         if (Completed >= lastRankValue)
-        progress.LevelRank[SaveManager.Instance.CurrentLevel - 1] = Rank;
+            progress.LevelRank[SaveManager.Instance.CurrentLevel - 1] = Rank;
 
         progress.Money += Money;
         if (SaveManager.Instance.CurrentLevel > progress.Level)
         {
             progress.Level = SaveManager.Instance.CurrentLevel;
+#if UNITY_EDITOR
+
+#elif UNITY_WEBGL
+switch (progress.Level)
+            {
+                case 1:
+                    Yandex.Level1Complete();
+                    break;
+                case 5:
+                    Yandex.Level5Complete();
+                    break;
+                case 10:
+                    Yandex.Level10Complete();
+                    break;
+                default: break;
+            }
+#endif
         }
         SaveManager.Instance.CurrentProgress = progress;
         SaveManager.Instance.SaveData(SaveManager.Instance.CurrentProgress);

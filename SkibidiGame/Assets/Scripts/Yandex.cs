@@ -1,6 +1,5 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Yandex : MonoBehaviour
 {
@@ -14,7 +13,10 @@ public class Yandex : MonoBehaviour
     public static extern void Rate();
 
     [DllImport("__Internal")]
-    public static extern void WatchAd();
+    public static extern void WatchAdAdd();
+
+    [DllImport("__Internal")]
+    public static extern void WatchAdDouble();
 
     [DllImport("__Internal")]
     public static extern void SaveExtern(string data);
@@ -45,6 +47,15 @@ public class Yandex : MonoBehaviour
 
     [DllImport("__Internal")]
     public static extern void CheckPurchases();
+
+    [DllImport("__Internal")]
+    public static extern void Level1Complete();
+
+    [DllImport("__Internal")]
+    public static extern void Level5Complete();
+
+    [DllImport("__Internal")]
+    public static extern void Level10Complete();
 
 
     private void Awake()

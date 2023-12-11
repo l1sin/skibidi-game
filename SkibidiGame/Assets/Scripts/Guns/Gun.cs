@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Gun : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Gun : MonoBehaviour
     public float Ammo;
     public float GunLevel;
     public float AnimationSpeedModifyer;
+    public AudioMixerGroup AudioMixerGroup;
 
     public float AmmoBonus = 0.2f;
     public float DamageBonus = 0.125f;
