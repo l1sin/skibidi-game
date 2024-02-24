@@ -5,6 +5,7 @@ public class Yandex : MonoBehaviour
 {
     public static Yandex Instance;
     public const string Path = "idbfs/SkibidiGameSaveDirectory";
+    public string Domen;
 
     [DllImport("__Internal")]
     public static extern string GetLanguage();
@@ -57,6 +58,9 @@ public class Yandex : MonoBehaviour
     [DllImport("__Internal")]
     public static extern void Level10Complete();
 
+    [DllImport("__Internal")]
+    public static extern string GetDomen();
+
 
     private void Awake()
     {
@@ -79,6 +83,7 @@ public class Yandex : MonoBehaviour
     {
         Debug.Log("WebInit");
         string lang = GetLanguage();
+        Domen = GetDomen();
         Debug.Log(lang);
         SaveManager.Instance.LoadLanguage(lang);
         LoadExtern();
