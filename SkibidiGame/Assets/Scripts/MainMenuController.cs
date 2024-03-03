@@ -94,6 +94,11 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
+    public void URL()
+    {
+        Application.OpenURL($"https://yandex.{Yandex.Instance.Domen}/games/developer/66279");
+    }
+
     public void SetProgress(bool progress)
     {
         if (progress)
